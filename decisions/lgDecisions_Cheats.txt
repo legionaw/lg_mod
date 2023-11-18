@@ -1,0 +1,284 @@
+country_decisions = {
+	revenue1 = {
+		potential = {
+			ai = no
+		}
+		allow = {
+		
+		}
+		effect = {
+			add_treasury = 50000
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	revenue2 = {
+		potential = {
+			ai = no
+		}
+		allow = {
+		
+		}
+		effect = {
+			add_treasury = 25000
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	revenue3 = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = tax_hike }
+		}
+		allow = {
+			is_at_war = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = "tax_hike"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	power1 = {
+		potential = {
+			ai = no
+			NOT = {
+				OR = {
+					adm_power = 249
+					has_country_modifier = lgModifiers_blockerADM
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				OR = {
+					adm_power = 249
+					has_country_modifier = lgModifiers_blockerADM
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 750
+			hidden_effect = {
+				add_country_modifier = {
+					name = "lgModifiers_blockerADM"
+					hidden = yes
+					duration = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	power1a = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = lgModifiers_blockerADM2
+			}
+		}
+		effect = {
+			add_adm_power = 250
+			hidden_effect = {
+				add_country_modifier = {
+					name = "lgModifiers_blockerADM2"
+					hidden = yes
+					duration = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	power2 = {
+		potential = {
+			ai = no
+			NOT = {
+				OR = {
+					mil_power = 249
+					has_country_modifier = lgModifiers_blockerMIL
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				OR = {
+					mil_power = 249
+					has_country_modifier = lgModifiers_blockerMIL
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 750
+			hidden_effect = {
+				add_country_modifier = {
+					name = "lgModifiers_blockerMIL"
+					hidden = yes
+					duration = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	power2a = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = lgModifiers_blockerMIL2
+			}
+		}
+		effect = {
+			add_mil_power = 250
+			hidden_effect = {
+				add_country_modifier = {
+					name = "lgModifiers_blockerMIL2"
+					hidden = yes
+					duration = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	power3 = {
+		potential = {
+			ai = no
+			NOT = {
+				OR = {
+					dip_power = 249
+					has_country_modifier = lgModifiers_blockerDIP
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				OR = {
+					dip_power = 249
+					has_country_modifier = lgModifiers_blockerDIP
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 750
+			hidden_effect = {
+				add_country_modifier = {
+					name = "lgModifiers_blockerDIP"
+					hidden = yes
+					duration = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	power3a = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = lgModifiers_blockerDIP2
+			}
+		}
+		effect = {
+			add_dip_power = 250
+			hidden_effect = {
+				add_country_modifier = {
+					name = "lgModifiers_blockerDIP2"
+					hidden = yes
+					duration = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	religious_reforms1 = {
+		potential = {
+			ai = no
+			religion = catholic
+			NOT = {
+				papal_influence = 101
+			}
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = lgModifiers_blocker
+			}
+		}
+		effect = {
+			add_papal_influence = 100
+			hidden_effect = {
+				add_country_modifier = {
+					name = "lgModifiers_blocker"
+					hidden = yes
+					duration = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	missionary_reform = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = missionary_boost }
+		}
+		allow = {
+		
+		}
+		effect = {
+			add_country_modifier = {
+				name = missionary_boost
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	revoke_missionary_reform = {
+		potential = {
+			ai = no
+			has_country_modifier = missionary_boost
+		}
+		allow = {
+		
+		}
+		effect = {
+			remove_country_modifier = missionary_boost
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

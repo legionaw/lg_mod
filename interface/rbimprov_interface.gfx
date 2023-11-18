@@ -1,0 +1,23 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_colonial_push_icon"
+		texturefile = "gfx/interface/anglican_aspects_colonial_growth.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_conscript_zealots_icon"
+		texturefile = "gfx/interface/anglican_aspects_manpower.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_support_crown_icon"
+		texturefile = "gfx/interface/anglican_aspects_legitimacy.dds"
+	}	
+	spriteType = {
+		name = "GFX_train_heir_icon"
+		texturefile = "gfx/interface/anglican_aspects_train_heir.dds"
+	}	
+}
+
+

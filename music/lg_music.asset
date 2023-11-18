@@ -1,0 +1,85 @@
+music = {
+	name = "ode_to_joy"
+	file = "ode_to_joy.ogg"
+}
+music = {
+	name = "asimplesongforcommoners"
+	file = "asimplesongforcommoners.ogg"
+}
+music = {
+	name = "coeurdelion"
+	file = "coeurdelion.ogg"
+}
+music = {
+	name = "conquistador_maintheme"
+	file = "conquistador_maintheme.ogg"
+}
+music = {
+	name = "crusaderkings2_maintitle"
+	file = "crusaderkings2_maintitle.ogg"
+}
+music = {
+	name = "thelastcrusade_finale"
+	file = "thelastcrusade_finale.ogg"
+}
+music = {
+	name = "godfather_lovetheme"
+	file = "godfather_lovetheme.ogg"
+}
+music = {
+	name = "godfather2_ending"
+	file = "godfather2_ending.ogg"
+}
+music = {
+	name = "intaberna"
+	file = "intaberna.ogg"
+}
+music = {
+	name = "johanswaltz"
+	file = "johanswaltz.ogg"
+}
+music = {
+	name = "mood_nightoverourempire"
+	file = "mood_nightoverourempire.ogg"
+}
+music = {
+	name = "startrek_four_homeagain"
+	file = "startrek_four_homeagain.ogg"
+}
+music = {
+	name = "startrek_intodarkness_londoncalling"
+	file = "startrek_intodarkness_londoncalling.ogg"
+}
+music = {
+	name = "startrek_six_overture"
+	file = "startrek_six_overture.ogg"
+}
+music = {
+	name = "startrek_three_opening"
+	file = "startrek_three_opening.ogg"
+}
+music = {
+	name = "startrek_tmp_ilia_theme"
+	file = "startrek_tmp_ilia_theme.ogg"
+}
+music = {
+	name = "thecoronation_titletheme"
+	file = "thecoronation_titletheme.ogg"
+}
+music = {
+	name = "theroyalmarch"
+	file = "theroyalmarch.ogg"
+}
+music = {
+	name = "startrek_ds9ma"
+	file = "startrek_ds9ma.ogg"
+}
+music = {
+	name = "highlandwanderer"
+	file = "highlandwanderer.ogg"
+}
+
+music = {
+	name = "tea_time"
+	file = "Tea Time.ogg"
+}

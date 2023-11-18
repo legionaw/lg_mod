@@ -1,0 +1,181 @@
+country_decisions = {
+	# Army Act
+	lgDecisions_ArmyAct1 = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = lgModifiers_ArmyAct }
+		}
+		allow = {
+		
+		}
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_ArmyAct
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	lgDecisions_ArmyAct2 = {
+		potential = {
+			ai = no
+			has_country_modifier = lgModifiers_ArmyAct
+		}
+		allow = {
+		
+		}
+		effect = {
+			remove_country_modifier = lgModifiers_ArmyAct
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+# Naval Act
+	lgDecisions_NavalAct1 = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = lgModifiers_NavalAct }
+		}
+		allow = {
+		
+		}
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_NavalAct
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	lgDecisions_NavalAct2 = {
+		potential = {
+			ai = no
+			has_country_modifier = lgModifiers_NavalAct
+		}
+		allow = {
+		
+		}
+		effect = {
+			remove_country_modifier = lgModifiers_NavalAct
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# Economy Act
+	lgDecisions_EconomyAct1 = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = lgModifiers_EconomyAct }
+		}
+		allow = {
+		
+		}
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_EconomyAct
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	lgDecisions_EconomyAct2 = {
+		potential = {
+			ai = no
+			has_country_modifier = lgModifiers_EconomyAct
+		}
+		allow = {
+		
+		}
+		effect = {
+			remove_country_modifier = lgModifiers_EconomyAct
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# Administration Act
+	lgDecisions_AdministrationAct1 = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = lgModifiers_AdministrationAct }
+		}
+		allow = {
+		
+		}
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_AdministrationAct
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	lgDecisions_AdministrationAct2 = {
+		potential = {
+			ai = no
+			has_country_modifier = lgModifiers_AdministrationAct
+		}
+		allow = {
+		
+		}
+		effect = {
+			remove_country_modifier = lgModifiers_AdministrationAct
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# Diplomacy Act
+	lgDecisions_DiplomacyAct1 = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = lgModifiers_DiplomacyAct }
+		}
+		allow = {
+		
+		}
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_DiplomacyAct
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	lgDecisions_DiplomacyAct2 = {
+		potential = {
+			ai = no
+			has_country_modifier = lgModifiers_DiplomacyAct
+		}
+		allow = {
+		
+		}
+		effect = {
+			remove_country_modifier = lgModifiers_DiplomacyAct
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,255 @@
+LgDiplomacy_Protectorate = {
+	category = influence
+	
+	alert_index = 6
+	alert_tooltip = LgDiplomacy_Protectorate_alert_tooltip
+	
+	require_acceptance = yes
+	#tooltip = VASSALINVALID
+	
+	is_visible = {
+		lgTriggers_british = yes
+		is_subject = no
+		FROM = {
+			is_subject = no
+			is_at_war = no
+#			OR = {
+#				primary_culture = nepali
+#				primary_culture = tibetan
+#			}
+			capital_scope = {
+				OR = {
+					continent = asia
+					continent = africa
+					continent = oceania
+#					area = nepalese_area
+#					area = kabulistan_area
+#					region = arabia_region
+#					region = tibet_region
+				}
+			}
+		}
+	}
+	
+	is_allowed = {
+		lgTriggers_british = yes
+		is_subject = no
+		FROM = {
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				OR = {
+					continent = asia
+					continent = africa
+					continent = oceania
+				}
+			}
+#			OR = {
+#				has_opinion = {
+#					who = ROOT
+#					value = 190
+#				}
+#				is_subject_of = ROOT
+#			}
+		}
+	}
+	
+	on_accept = {
+		ROOT = {
+			create_subject = {
+				who = FROM
+				subject_type = lgSubjectTypes_Protectorate
+			}
+		}
+		add_trust = {
+			who = FROM
+			value = 10
+			mutual = yes
+		}
+	}
+	
+	ai_acceptance = { # This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
+		add_entry = {
+			name = DEVELOPMENT_OF_ROOT
+			export_to_variable = {
+				variable_name = ai_value
+				value = total_development
+			}
+			multiply_variable = { which = ai_value value = 0.075 }
+		}
+		
+		add_entry = {
+			name = OPINION
+			export_to_variable = {
+				which = ai_value
+				value = opinion
+				who = FROM
+			}
+			multiply_variable = { which = ai_value value = 0.10 }
+		}
+	
+		add_entry = {
+			name = PRESTIGE_OF_ROOT
+			export_to_variable = {
+				which = ai_value
+				value = prestige
+			}
+			multiply_variable = { which = ai_value value = 0.25 }
+		}
+		add_entry = {
+			name = HAS_FRIENDLY_ATTITUDE
+			limit = {
+				FROM = {
+					ai_attitude = { who = ROOT attitude = attitude_friendly }
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			multiply_variable = { which = ai_value value = 10 }
+		}
+		add_entry = {
+			name = HAS_THREATENED_ATTITUDE
+			limit = {
+				FROM = {
+					ai_attitude = { who = ROOT attitude = attitude_threatened }
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = { which = ai_value value = 25 }
+		}
+		add_entry = {
+			name = HAS_ALLIED_ATTITUDE
+			limit = {
+				FROM = {
+					ai_attitude = { who = ROOT attitude = attitude_allied }
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = { which = ai_value value = 25 }
+		}
+		add_entry = {
+			name = MILITARY_STRENGTH_ROOT
+			export_to_variable = {
+				which = ai_value
+				value = army_size
+			}
+			multiply_variable = { which = ai_value value = 0.35 }
+		}
+		add_entry = {
+			name = LG_ACCEPT_SUBJECT
+			limit = {
+				FROM = {
+					is_subject_of = ROOT
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = { which = ai_value value = 1000 }
+		}
+		
+		# Negative Values ##########################################
+		
+		add_entry = {
+			name = HAS_NEUTRAL_ATTITUDE
+			limit = {
+				FROM = {
+					ai_attitude = { who = ROOT attitude = attitude_neutral }
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = { which = ai_value value = -25 }
+		}
+		add_entry = {
+			name = HAS_RIVALRY_ATTITUDE
+			limit = {
+				FROM = {
+					ai_attitude = { who = ROOT attitude = attitude_rivalry }
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = { which = ai_value value = -25 }
+		}
+		add_entry = {
+			name = HAS_HOSTILE_ATTITUDE
+			limit = {
+				FROM = {
+					ai_attitude = { who = ROOT attitude = attitude_hostile }
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = { which = ai_value value = -35 }
+		}
+		add_entry = {
+			name = HAS_OUTRAGED_ATTITUDE
+			limit = {
+				FROM = {
+					ai_attitude = { who = ROOT attitude = attitude_outraged }
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = { which = ai_value value = -75 }
+		}
+		add_entry = {
+			name = DEVELOPMENT_OF_FROM
+			export_to_variable = {
+				which = ai_value
+				value = total_development
+				who = FROM
+			}
+			multiply_variable = { which = ai_value value = -1.00 }
+		}
+		add_entry = {
+			name = MILITARY_STRENGTH_SUBJECT
+			export_to_variable = {
+				which = ai_value
+				value = army_size
+				who = FROM
+			}
+			multiply_variable = { which = ai_value value = -5.0 }
+		}
+		add_entry = {
+			name = BORDER_DISTANCE
+			export_to_variable = {
+				which = ai_value
+				value = border_distance
+				who = FROM
+				with = ROOT
+			}
+			multiply_variable = { which = ai_value value = -0.1 }
+		}
+		add_entry = {
+			name = BASE_REJECTION
+			export_to_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = { which = ai_value value = -80 }
+		}
+	}
+	
+	ai_will_do = {
+		always = no
+	}
+}

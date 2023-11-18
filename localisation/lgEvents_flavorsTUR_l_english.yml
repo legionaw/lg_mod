@@ -1,0 +1,6 @@
+﻿l_english:
+ lgEvents_flavorTUR.0001.t: "Great Greek Revolt"
+ lgEvents_flavorTUR.0001.d: "The Greeks has been scheming behind our back to revolt against our benevolent rule. They are now rising up!"
+ lgEvents_flavorTUR.0002t: "Granting of Millet"
+ lgEvents_flavorTUR.0002d: "A millet is in effect a grant of freedom to a religous minority to practice their faith, in exchange for taxes and other obligations. [Root.Monarch.GetTitle] [Root.Monarch.GetName] has decided to make such a grant to the provinces that had been conquered by the Ottoman Empire."
+ lgEvents_flavorTUR.0002a: "Excellent."

@@ -1,0 +1,97 @@
+lgModifiers_dynasties = {
+	potential = {
+	}
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = HAB
+				dynasty = "von Habsburg"
+			}
+			AND = {
+				OR = {
+					tag = BRA
+					AND = {
+						tag = PRU
+						NOT = {
+							exists = BRA
+						}
+					}
+				}
+				dynasty = "von Hohenzollern"
+			}
+			AND = {
+				tag = FRA
+				OR = {
+					AND = {
+						NOT = {
+							is_year = 1589
+						}
+						dynasty = "de Valois"
+					}
+					AND = {
+						is_year = 1589
+						dynasty = "de Bourbon"
+					}
+				}
+			}
+			AND = {
+				tag = SAV
+				dynasty = "di Savoia"
+			}
+			AND = {
+				tag = BYZ
+				dynasty = "Palaiologos"
+			}
+			AND = {
+				OR = {
+					tag = SCO
+					tag = ENG
+				}
+				dynasty = "Stuart"
+				NOT = {
+					is_year = 1714
+				}
+				is_free_or_tributary_trigger = yes
+			}
+		}
+		ai = yes
+	}
+	
+	heir_chance = 2
+}
+
+# Multi-ethnic empires
+lgModifiers_MultiEthnic = {
+	potential = {
+	}
+	
+	trigger = {
+		ai = yes
+		OR = {
+			tag = HAB
+			tag = TUR
+			OR = {
+				tag = BRA
+				AND = {
+					tag = PRU
+					NOT = {
+						exists = BRA
+					}
+				}
+			}
+			OR = {
+				tag = MOS
+				AND = {
+					tag = RUS
+					NOT = {
+						exists = MOS
+					}
+				}
+			}
+		}
+	}
+	
+	num_accepted_cultures = 5
+	promote_culture_cost = -0.5
+}

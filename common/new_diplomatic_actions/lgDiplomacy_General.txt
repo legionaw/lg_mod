@@ -1,0 +1,334 @@
+#### TRADE ASSISTANCE ####
+send_diplomatic_aid = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+#	require_acceptance = yes
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = { ai = yes }
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+		ROOT = { dip_power = 250 }
+	}
+	
+	on_accept = {
+		ROOT = { add_dip_power = -250  }
+		FROM = { add_dip_power = 250  }
+		FROM = {
+			add_trust = {
+				who = ROOT
+				value = 1
+				mutual = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = { 
+							who = ROOT
+							modifier = lgModifiers_OpinionSentAid_DIP
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSentAid_DIP
+				}
+			}
+		}
+	}
+#	on_decline = {
+#		FROM = { 
+#			add_trust = {
+#				who = ROOT
+#				value = -5
+#				mutual = yes
+#			}
+#		}
+#	}
+#	ai_acceptance = {
+#		add_entry = {
+#			name = BASIC_ATTITUDE
+#			limit = { always = yes }
+#			export_to_variable = {
+#				variable_name = ai_value 
+#				value = 10
+#			}
+#		}
+#	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+#### ADMINISTRATIVE AID ####
+send_administrative_aid = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+#	require_acceptance = yes
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = { ai = yes }
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+		ROOT = { adm_power = 250 }
+	}
+	
+	on_accept = {
+		ROOT = { add_adm_power = -250  }
+		FROM = { add_adm_power = 250  }
+		FROM = {
+			add_trust = {
+				who = ROOT
+				value = 1
+				mutual = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = { 
+							who = ROOT
+							modifier = lgModifiers_OpinionSentAid_ADM
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSentAid_ADM
+				}
+			}
+		}
+	}
+#	on_decline = {
+#		add_trust = {
+#			who = ROOT
+#			value = -5
+#			mutual = yes
+#		}
+#	}
+#	ai_acceptance = {
+#		add_entry = {
+#			name = BASIC_ATTITUDE
+#			limit = { always = yes }
+#			export_to_variable = {
+#				variable_name = ai_value 
+#				value = 10
+#			}
+#		}
+#	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+#### MILITARY ASSISTANCE ####
+send_military_aid = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+#	require_acceptance = yes
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = { ai = yes }
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+		ROOT = { mil_power = 250 }
+	}
+	on_accept = {
+		ROOT = { add_mil_power = -250  }
+		FROM = { add_mil_power = 250 }
+		FROM = {
+			add_trust = {
+				who = ROOT
+				value = 1
+				mutual = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = { 
+							who = ROOT
+							modifier = lgModifiers_OpinionSentAid_MIL
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSentAid_MIL
+				}
+			}
+		}
+	}
+#	on_decline = {
+#		FROM = { 
+#			add_trust = {
+#				who = ROOT
+#				value = -5
+#				mutual = yes
+#			}
+#		}
+#	}
+#	ai_acceptance = {
+#		add_entry = {
+#			name = BASIC_ATTITUDE
+#			limit = { always = yes }
+#			export_to_variable = {
+#				variable_name = ai_value 
+#				value = 10
+#			}
+#		}
+#	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+#### SEND VOLUNTEERS ####
+send_volunteers_to_ally = {   
+	category = alliance
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+#	require_acceptance = yes
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = { ai = yes }
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+		ROOT = { manpower = 10 }
+	}
+	on_accept = {
+		ROOT = { add_manpower = -10 }
+		FROM = { add_manpower = 10 }
+		add_trust = {
+			who = ROOT
+			value = 10
+			mutual = no
+		}
+		FROM = {
+			add_trust = {
+				who = ROOT
+				value = 1
+				mutual = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = { 
+							who = ROOT
+							modifier = sent_manpower
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = sent_manpower
+				}
+			}
+		}
+	}
+#	on_decline = {
+#		FROM = { 
+#			add_trust = {
+#				who = ROOT
+#				value = -5
+#				mutual = yes
+#			}
+#		}
+#	}
+#	ai_acceptance = {
+#		add_entry = {
+#			name = BASIC_ATTITUDE
+#			limit = { always = yes }
+#			export_to_variable = {
+#				variable_name = ai_value 
+#				value = 10
+#			}
+#		}
+#	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+#### SEND SAILORS ####
+send_sailors_to_ally = {   
+	category = alliance
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+#	require_acceptance = yes
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = { ai = yes }
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+		ROOT = { sailors = 10000 }
+	}
+	on_accept = {
+		ROOT = { add_sailors = -10000 }
+		FROM = { add_sailors = 10000 }
+		add_trust = {
+			who = ROOT
+			value = 10
+			mutual = no
+		}
+		FROM = {
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = { 
+							who = ROOT
+							modifier = sent_sailors
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = sent_sailors
+				}
+			}
+		}
+	}
+#	on_decline = {
+#		FROM = { 
+#			add_trust = {
+#				who = ROOT
+#				value = -5
+#				mutual = yes
+#			}
+#		}
+#	}
+#	ai_acceptance = {
+#		add_entry = {
+#			name = BASIC_ATTITUDE
+#			limit = { always = yes }
+#			export_to_variable = {
+#				variable_name = ai_value 
+#				value = 10
+#			}
+#		}
+#	}
+	ai_will_do = {
+		always = no
+	}
+}

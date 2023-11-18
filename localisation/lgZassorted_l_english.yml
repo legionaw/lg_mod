@@ -1,0 +1,12 @@
+﻿l_english:
+ lgTooltips_CANNOT_CONVERT_CULTURE: "§R- We cannot convert $WHERE|Y$'s culture§!"
+ lgTooltips_CANNOT_MOVE_CAPITAL: "§R- We cannot move the capital as it is locked§!"
+ proselytism_aspect: "§YAnglican Evangelism§!"
+ desc_proselytism_aspect: "We are determined to spread the Anglican faith beyond our borders. Being a state Church, this will harm our international reputation."
+ TRADE_COMPANY_AFRICA_British_trade_company_west_africa: "Royal African Company"
+ TRADE_COMPANY_AFRICA_British_trade_company_south_africa: "[Root.GetAdjective] South Africa Company"
+ TRADE_COMPANY_AFRICA_British_trade_company_east_africa: "Imperial [Root.GetAdjective] East Africa Company"
+ lg_flagship_eng: "Royal Navy Command Autonomy"
+ lg_flagship_eng_desc: "The Royal Navy specialized in that it gave the commanders a considerable autonomy. In short, circumstances would dictate the execution, subject to the guiding rule."
+ merc_scottish_highlands: "Scottish Highlands Regiments"
+ merc_gurkha: "Gurkha Regiments"

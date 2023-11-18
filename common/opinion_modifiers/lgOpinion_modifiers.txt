@@ -1,0 +1,131 @@
+treaty_of_windsor = {
+	opinion = 50
+	#yearly_decay = -5
+	min = 50
+}
+
+spa_habsburgs_married = {
+	opinion = 40
+	years = 40
+	yearly_decay = 1
+}
+
+spa_habsburgs_spurned = {
+	opinion = -40
+	years = 40
+	yearly_decay = 1
+}
+
+prussian_relations = {
+	opinion = 100
+	yearly_decay = -4
+}
+
+iberian_competition = {
+	opinion = -100
+	yearly_decay = -4
+}
+
+spa_bourbon_married = {
+	opinion = 40
+	years = 40
+	yearly_decay = 1
+}
+
+spa_bourbon_spurned = {
+	opinion = -40
+	years = 40
+	yearly_decay = 1
+}
+
+spa_valois_married = {
+	opinion = 40
+	years = 40
+	yearly_decay = 1
+}
+
+spa_valois_spurned = {
+	opinion = -40
+	years = 40
+	yearly_decay = 1
+}
+
+austrian_union = {
+	opinion = 100
+	yearly_decay = -4
+}
+
+habsburgs_pleased = {
+	opinion = 200
+	yearly_decay = -4
+}
+
+lgOpinionModifiers_SPAindependence1 = {
+	opinion = -200
+	yearly_decay = -4
+}
+
+lgOpinionModifiers_SPAindependence2 = {
+	opinion = -200
+	yearly_decay = -4
+}
+
+opinion_canada = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_peru = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_colombia = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_st_thomas = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_california = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_st_martin = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_curacao = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_brittany = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_alaska = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_columbia = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_guadelupe = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+opinion_martinique = {
+	opinion = 50
+	yearly_decay = 1
+}

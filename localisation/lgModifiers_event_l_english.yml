@@ -1,0 +1,60 @@
+﻿l_english:
+ custom_colonization: "Colonization Venture"
+ desc_custom_colonization: "The Sovereign has agreed to grant a charter for a company to colonize lands beyond the Europe. By God, we must conquer the unknown lands!"
+ 
+ tax_hike: "Temporary Tax Hike"
+ desc_tax_hike: "Tax has been temporarily increased to pay for the war."
+ 
+ missionary_boost: "Missionary Reforms"
+ desc_missionary_boost: "Missionary reforms has been implemented."
+ 
+ trade_depot_slot: "Trade Depot Slot"
+ desc_trade_depot_slot: "Adds a building slot for Trade Depot"
+ 
+ stock_exchange_slot: "Stock Exchange Slot"
+ desc_stock_exchange_slot: "Adds a building slot for Stock Exchange"
+ 
+ lg_westernized: "Westernized"
+ desc_lg_westernized: "Westernized"
+ 
+ lgModifiers_DiplomaticCorps: "HM Diplomatic Service"
+ desc_lgModifiers_DiplomaticCorps: "HM Diplomatic Service have been established to help facilitate the England's diplomatic activities"
+ 
+ approved_merchant_venture: "Merchant Venture"
+ desc_approved_merchant_venture: "Merchant Venture"
+ 
+ lgModifiers_Subsidy: "Level I Subsidy"
+ desc_lgModifiers_Subsidy: "A foreign power has subsidized certain aspects of our state."
+ lgModifiers_Subsidy2: "Level II Subsidy"
+ desc_lgModifiers_Subsidy2: "A foreign power has subsidized certain aspects of our state."
+ lgModifiers_Subsidy3: "Level III Subsidy"
+ desc_lgModifiers_Subsidy3: "A foreign power has subsidized certain aspects of our state."
+ lgModifiers_Subsidy4: "Level IV Subsidy (Defensive)"
+ desc_lgModifiers_Subsidy4: "A foreign power has subsidized the defensive aspects of our state."
+ 
+ lgModifiers_blocker: "Blocked"
+ lgModifiers_blockerADM: "Blocked"
+ lgModifiers_blockerADM2: "Blocked"
+ lgModifiers_blockerMIL: "Blocked"
+ lgModifiers_blockerMIL2: "Blocked"
+ lgModifiers_blockerDIP: "Blocked"
+ lgModifiers_blockerDIP2: "Blocked"
+ lgModifiers_blockerMobilized: "Blocked"
+ lgModifiers_conscripted0: "Blocked"
+ desc_lgModifiers_blocker: "Blocked"
+ desc_lgModifiers_blockerADM: "Blocked"
+ desc_lgModifiers_blockerADM2: "Blocked"
+ desc_lgModifiers_blockerMIL: "Blocked"
+ desc_lgModifiers_blockerMIL2: "Blocked"
+ desc_lgModifiers_blockerDIP: "Blocked"
+ desc_lgModifiers_blockerDIP2: "Blocked"
+ desc_lgModifiers_blockerMobilized: "Blocked"
+ desc_lgModifiers_conscripted0: "Blocked"
+ 
+ lgModifiers_millet: "Millet"
+ desc_lgModifiers_millet: "Millet is in effect a religous freedom granted to a religious minority in exchange for taxes and other obligations."
+ 
+ lgModifiers_CatholicEntrenched: "Catholicism Entrenched"
+ desc_lgModifiers_CatholicEntrenched: "The Catholicism is entrenched in this province."
+ lgModifiers_CatholicEntrenched2: "Catholicism Entrenched"
+ desc_lgModifiers_CatholicEntrenched2: "The Catholicism is entrenched in this province."

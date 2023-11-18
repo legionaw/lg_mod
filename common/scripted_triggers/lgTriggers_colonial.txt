@@ -1,0 +1,110 @@
+lgTriggers_PortugueseBrazil = {
+	primary_culture = portugese
+	is_subject_of = POR
+	capital_scope = {
+		colonial_region = colonial_brazil
+	}
+}
+
+lgTriggers_SpanishColonies = {
+	primary_culture = castillian
+	OR = {
+		is_subject_of = CAS
+		is_subject_of = SPA
+	}
+	capital_scope = {
+		OR = {
+			colonial_region = colonial_mexico
+			colonial_region = colonial_la_plata
+			colonial_region = colonial_peru
+			colonial_region = colonial_colombia
+		}
+	}
+}
+
+lgTriggers_FrenchLouisiana = {
+	primary_culture = cosmopolitan_french
+	is_subject_of = FRA
+	capital_scope = {
+		colonial_region = colonial_louisiana
+	}
+}
+
+lgTriggers_frenchcanada = {
+	culture = cosmopolitan_french
+	OR = {
+		area = lower_canada_area
+		area = notre_dame_mountains_area
+		area = cote_nord_area
+	}
+}
+
+#### PRINCELY STATES NOT UNDER BRITISH PARAMOUNTCY ####
+#lgTriggers_PrincelyStates1 = {
+#	NOT = {
+#		OR = {
+#			AND = {
+#				is_subject_of = ENG
+#				NOT = {
+#					exists = GBR
+#				}
+#			}
+#			is_subject_of = GBR
+#		}
+#	}
+#	capital_scope = {
+#		superregion = india_superregion
+#	}
+#}
+
+#### PRINCELY STATES UNDER BRITISH PARAMOUNTCY ####
+#lgTriggers_PrincelyStates2 = {
+#	is_subject_of = {
+#		OR = {
+#			AND = {
+#				ENG
+#				NOT = { 
+#					exists = GBR
+#				}
+#			}
+#			GBR
+#		}
+#	}
+#	capital_scope = {
+#		superregion = india_superregion
+#	}
+#}
+
+##################################################
+### British rule in India											 ###
+##################################################
+
+# Provinces of India under direct British rule
+lgTriggers_BritishRaj = {
+	any_owned_province = {
+		OR = {
+			superregion = india_superregion
+			superregion = china_superregion
+			superregion = east_indies_superregion
+			region = japan_region
+		}
+		has_port = yes
+	}
+}
+
+# Princely states or protectorates in India under British paramountcy
+lgTriggers_BritishIndia = {
+	OR = {
+		is_subject_of = ENG
+		is_subject_of = GBR
+	}
+#	OR = {
+#		is_subject_of_type = lgSubjectTypes_PrincelyStates
+#		is_subject_of_type = lgSubjectTypes_Protectorate
+#	}
+}
+
+lgTriggers_BritishEmpire = {
+	is_subject_of_type = lgSubjectTypes_PrincelyStates
+	is_subject_of_type = lgSubjectTypes_Protectorate
+}

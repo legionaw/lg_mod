@@ -1,0 +1,53 @@
+namespace = lgEventsBRA
+
+# The Rise of the Hohenzollerns
+country_event = { 
+	id = lgEventsBRA.0002
+	title = lgEventsBRA.0002t
+	desc = lgEventsBRA.0002d
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.1
+			NOT = { dynasty = "von Hohenzollern" }
+		}
+	}
+	
+	trigger = {
+		tag = BRA
+		NOT = {	dynasty = "von Hohenzollern" }
+		has_heir = no
+	}
+	
+	option = {
+	name = lgEventsBRA.0002a  # There will never be reconciliation between our two houses
+		ai_chance = { factor = 0 }
+		every_owned_province = {
+			add_province_modifier = {
+				name = add_unrest_5_modifier
+				duration = 1825
+			}
+		}
+		add_prestige = 10
+	}
+	
+	option = {
+		name = lgEventsBRA.0002b  # It is time for peace, let us join our two houses together in marriage 
+		ai_chance = { factor = 100 }
+		add_stability = 1
+		define_heir = {
+			claim = 100
+			name = "Friedrich"
+			dynasty = "von Hohenzollern"
+			adm = 6
+			dip = 6
+			mil = 6
+		}
+	}
+}

@@ -1,0 +1,71 @@
+﻿l_english:
+ swag.0013t: "Colony Religion"
+ swag.0013d: "Ever since our country converted to our rightful religion, it now falls upon the colony to either convert to it or not. How shall we instruct our governors on this?"
+ swag.0013a: "Convert right away!"
+ swag.EVTOPTB0013: "NO. VETOED. DENIED. REJECTED. REFUSED. NEIN. NEIGH."
+ 
+ colony_religion.0014t: "Colony Religion"
+ colony_religion.0014d: "Ever since our country converted to our rightful religion, it now falls upon the colony to either convert to it or not. How shall we instruct our governors on this?"
+ colony_religion.0014a: "Convert right away!"
+ colony_religion.EVTOPTB0014: "NO. VETOED. DENIED. REJECTED. REFUSED. NEIN. NEIGH."
+ 
+ lg_event.0008t: "Colonization"
+ lg_event.0008d: "Age of colonization has arrived. A group of men has come before you requesting a charter for their company to begin colonizing lands far beyond Europe."
+ 
+ war_tax.1041t: "Repeal of the Emergency War Tax"
+ war_tax.1041d: "Now that the war is over, the emergency war tax that has been imposed will be repealed."
+ war_tax.1041.a: "OK."
+ 
+ mobilisation.1042t: "Demobilisation"
+ mobilisation.1042d: "We have started to demobilize our reserves."
+ mobilisation.1042.a: "OK."
+ 
+ lgEvents_misc.0001.t: "Great Greek Revolt"
+ lgEvents_misc.0001.d: "The Greeks has been scheming behind our back to revolt against our benevolent rule. They are now rising up!"
+ 
+ lgEvents_misc.0005t: "Westernization Being Resisted"
+ lgEvents_misc.0005d: "The people are angry at attempts to westernize our society and disrupting their way life, leading them to violently resist our policies. They are now rising up!"
+ 
+ lgEvents_misc.0002.t: "Electorate of Bavaria"
+ lgEvents_misc.0002.d: "Due to the lobbying by our relatives from Habsburg, the Holy Roman Emperor has decided to grant Bavaria an electorate."
+ 
+ lgEvents_misc.0007t: "Good relations with Austria"
+ lgEvents_misc.0007d: "Relations has become extremely good with Austria."
+ 
+ lgEvents_misc.0010t: "Electorate of Brandenburg"
+ lgEvents_misc.0010d: "The Holy Roman Emperor has decided to grant Brandenburg an electorate."
+
+ lgEvents_misc.0011t: "Electorate of Cologne"
+ lgEvents_misc.0011d: "The Holy Roman Emperor has decided to grant Cologne an electorate."
+ 
+ lgEvents_misc.0012t: "Electorate of Mainz"
+ lgEvents_misc.0012d: "The Holy Roman Emperor has decided to grant Mainz an electorate."
+ 
+ lgEvents_misc.0013t: "Electorate of Palatinate"
+ lgEvents_misc.0013d: "The Holy Roman Emperor has decided to grant Palatinate an electorate."
+
+ lgEvents_misc.0014t: "Electorate of Saxony"
+ lgEvents_misc.0014d: "The Holy Roman Emperor has decided to grant Saxony an electorate."
+
+ lgEvents_misc.0015t: "Electorate of Trier"
+ lgEvents_misc.0015d: "The Holy Roman Emperor has decided to grant Trier an electorate."
+ 
+ lgEvents_misc.0016t: "Electorate of Bohemia"
+ lgEvents_misc.0016d: "The Holy Roman Emperor has decided to grant Bohemia an electorate."
+
+ lgEvents_misc.0017.t: "Electorate of Hannover"
+ lgEvents_misc.0017.d: "The Holy Roman Emperor has decided to grant Hannover an electorate."
+
+ lgEvents_misc.0018t: "Merchant Venture"
+ lgEvents_misc.0018d: "A group of men has come before you requesting a charter for their company to begin trading far beyond Europe."
+ lgEvents_misc.0018a: "Yes"
+ lgEvents_misc.0018b: "No"
+ 
+ lgEvents_misc.0019t: "Diplomatic Corps"
+ lgEvents_misc.0019d: "Time has now come to establish diplomatic corps to further our diplomatic reach around the world."
+ lgEvents_misc.0019a: "Yes"
+ lgEvents_misc.0019b: "No"
+ 
+ lgEvents_miscRevolts.0001.t: "Great Persian Revolt"
+ lgEvents_miscRevolts.0001.d: "The traitorous Persians has been scheming behind our back to revolt against our benevolent rule. They are now rising up!"
+ lgEvents_miscRevolts.0001.a: "Placeholder"

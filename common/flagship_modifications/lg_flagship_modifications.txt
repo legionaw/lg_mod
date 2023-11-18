@@ -1,0 +1,35 @@
+lg_flagship_eng = {
+	trigger = {
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
+		normal_or_historical_nations = yes
+		ai = no
+	}
+	modifier = {
+		flagship_naval_engagement_modifier = 6
+		blockade_impact_on_siege_in_fleet_modifier = 2
+		movement_speed_in_fleet_modifier = 1
+		morale_in_fleet_modifier = 0.2
+		admiral_skill_gain_modifier = 0.05
+		naval_maintenance_flagship_modifier = 0.5
+		#exploration_mission_range_in_fleet_modifier = 1.25
+		#trade_power_in_fleet_modifier = 2
+		#naval_attrition_in_fleet_modifier = -0.3
+	}
+	ai_trade_score = {
+		factor = 1
+		modifier = {
+			factor = 10
+			has_government_attribute = is_pirate_republic_reform
+		}
+	}
+	ai_war_score = {
+		factor = 1
+		modifier = {
+			factor = 10
+			has_government_attribute = is_pirate_republic_reform
+		}
+	}
+}

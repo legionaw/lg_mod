@@ -1,0 +1,6 @@
+french_troubles = {
+	stability_cost_modifier = 1
+	war_exhaustion = 1
+	prestige = -1
+	inflation_reduction = -1
+}

@@ -1,0 +1,326 @@
+### convert  mil power points to nobility, adm for church and dip for burgher loyalty, when loyalty less than 30. 100 power points for 5 loyalty.
+country_decisions = {
+####################### power to noble estate loyalty ################
+	Mil_to_Nloyalty = {
+		potential = {
+			mil_power = 100
+			NOT = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 70
+				}
+			}
+		}
+		allow = {
+			ai = no
+			has_estate = estate_nobles
+			mil_power = 100
+			NOT = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 70
+				}
+			}
+		}
+		
+		effect = {
+			add_mil_power = -100
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+####################### power to church estate loyalty ################
+	admin_to_Cloyalty = {
+		potential = {
+			adm_power = 100
+			NOT = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 70
+				}
+			}
+		}
+		allow = {
+			ai = no
+			has_estate = estate_church
+			adm_power = 100
+			NOT = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 70
+				}
+			}
+		}
+		
+		effect = {
+			add_adm_power = -100
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+####################### power to burgher estate loyalty ################
+	Dip_to_Bloyalty = {
+		potential = {
+			dip_power = 100
+			NOT = {
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 70
+				}
+			}
+		}
+		allow = {
+			ai = no
+			has_estate = estate_burghers
+			dip_power = 100
+			NOT = {
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 70
+				}
+			}
+		}
+		
+		effect = {
+			add_dip_power = -100
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 10
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+##################################################################################
+### convert  mil power points to nobility, adm for church and dip for burgher influence, if influence > 10, using 100 power (adm, dip, mil), for 20 years.
+	
+####################### power to burgher estate influence ################
+	
+	Dip_to_Binfluence = {
+		potential = {
+			dip_power = 100
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 50
+				}
+			}
+		}
+		allow = {
+			ai = no
+			has_estate = estate_burghers
+			dip_power = 100
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 50
+				}
+			}
+		}
+		
+		effect = {
+			add_dip_power = -100
+			add_estate_influence_modifier = {
+				estate = estate_burghers
+				influence = 10
+				duration = 7300						# 20 years
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	Mil_to_Ninfluence = {
+		potential = {
+			mil_power = 100
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 50
+				}
+			}
+		}
+		allow = {
+			ai = no
+			has_estate = estate_nobles
+			mil_power = 100
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 50
+				}
+			}
+		}
+		
+		effect = {
+			add_mil_power = -100
+			add_estate_influence_modifier = {
+				estate = estate_nobles
+				influence = 10
+				duration = 7300
+			}
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	Adm_to_Cinfluence = {
+		potential = {
+			adm_power = 100
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 50
+				}
+			}
+		}
+		allow = {
+			ai = no
+			has_estate = estate_church
+			adm_power = 100
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 50
+				}
+			}
+		}
+		
+		effect = {
+			add_adm_power = -100
+			add_estate_influence_modifier = {
+				estate = estate_church
+				influence = 10
+				duration = 7300
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+##################################################################################
+### convert  mil power points to nobility, adm for church and dip for burgher influence, if influence => 80, reduce by 5, using 100 power (adm, dip, mil), for 20 years.
+	
+####################### power to burgher estate influence ################
+	
+	Dip_to_BRinfluence = {
+		potential = {
+			dip_power = 100
+			estate_influence = {
+				estate = estate_burghers						# over 80 influence
+				influence = 80
+			}
+		}
+		allow = {
+			ai = no
+			has_estate = estate_burghers
+			dip_power = 100
+			estate_influence = {
+				estate = estate_burghers						# over 80 influence
+				influence = 80
+			}
+		}
+		
+		effect = {
+			add_dip_power = -100
+			add_estate_influence_modifier = {
+				estate = estate_burghers
+				influence = -10
+				duration = 7300		# 20 years
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+#############################
+	Mil_to_NRinfluence = {
+		potential = {
+			mil_power = 100
+			estate_influence = {
+				estate = estate_nobles
+				influence = 80	# above 80 influence
+			}
+		}
+		allow = {
+			ai = no
+			has_estate = estate_nobles
+			mil_power = 100
+			estate_influence = {
+				estate = estate_nobles
+				influence = 80	# above 80 influence
+			}
+		}
+		
+		effect = {
+			add_mil_power = -100
+			add_estate_influence_modifier = {
+				estate = estate_nobles
+				influence = -5
+				duration = 7300
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+####################################3 
+	Adm_to_CRinfluence = {
+		potential = {
+			adm_power = 100
+			estate_influence = {
+				estate = estate_church
+				influence = 80
+			}
+		}
+		allow = {
+			ai = no
+			has_estate = estate_church
+			adm_power = 100
+			estate_influence = {
+				estate = estate_church
+				influence = 80
+			}
+		}
+		
+		effect = {
+			add_adm_power = -100
+			add_estate_influence_modifier = {
+				estate = estate_church
+				influence = -10
+				duration = 7300
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

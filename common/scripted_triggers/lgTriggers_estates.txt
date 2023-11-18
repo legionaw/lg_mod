@@ -1,0 +1,18 @@
+lgTriggers_Estates1 = {
+	#NOT = { has_reform = lgParliamentaryMonarchy }
+	NOT = { has_government_attribute = is_merchant_republic }
+	NOT = { has_reform = native_council_legacy }
+	NOT = { has_reform = siberian_native_council }
+	NOT = { has_reform = celestial_empire }
+	NOT = { has_reform = steppe_horde }
+	NOT = { has_reform = revolutionary_republic_reform }
+	NOT = { has_reform = revolutionary_empire_reform }
+	is_nomad = no
+	is_colonial_nation = no
+}
+
+lgTriggers_Estates2 = {
+	NOT = { has_reform = english_monarchy }					# for nobility only
+	NOT = { has_reform = constitutional_monarchy }	# for nobility only
+	NOT = { has_reform = constitutional_republic }	# for nobility only
+}

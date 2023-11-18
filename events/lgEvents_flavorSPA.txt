@@ -1,0 +1,450 @@
+namespace = lgEvents_flavorSPA
+
+# Tensions due to growing colonial desires for an independence
+country_event = {
+	id = lgEvents_flavorSPA.0001
+	title = "lgEvents_flavorSPA.0001t"
+	desc = "lgEvents_flavorSPA.0001d"
+	picture = COURT_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlags_SPAevent001 }
+		is_year = 1810
+		ai = yes
+		num_of_cities = 4
+		is_colonial_nation_of = SPA
+		liberty_desire = 50
+		capital_scope = {
+			OR = {
+				colonial_region = colonial_mexico
+				colonial_region = colonial_colombia
+				colonial_region = colonial_peru
+				colonial_region = colonial_la_plata
+			}
+			is_core = ROOT
+		}
+	}
+	
+	immediate = {
+		set_country_flag = lgFlags_SPAevent001
+	}
+	
+	option = {
+		name = "lgEvents_flavorSPA.0001a"
+		ai_chance = {
+			factor = 100
+		}
+		add_opinion = { who = SPA modifier = lgOpinionModifiers_SPAindependence1 }
+		SPA = {
+			add_opinion = { who = ROOT modifier = lgOpinionModifiers_SPAindependence2 }
+		}
+	}
+	option = {
+		name = "lgEvents_flavorSPA.0001b"
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Royal Marriage with Habsburg Austria
+country_event = {
+	id = lgEvents_flavorSPA.0002
+	title = "lgEvents_flavorSPA.0002.t"
+	desc = "lgEvents_flavorSPA.0002.d"
+	picture = COURT_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlags_SPAevent0002 }
+		OR = {
+			tag = SPA
+			AND = {
+				tag = CAS
+				NOT = {
+					exists = SPA
+				}
+			}
+		}
+		is_lesser_in_union = no
+		marriage_with = HAB
+		HAB = {
+			dynasty = "von Habsburg"
+			OR = {
+				NOT = {
+					has_country_flag = bur_marriage_successor
+				}
+				ai = no
+			}
+		}
+		NOT = {
+			dynasty = HAB
+		}
+		FRA = {
+			is_rival = HAB
+			is_rival = ROOT
+		}
+		NOT = {
+			OR = {
+				is_rival = HAB
+				war_with = HAB
+				HAB = {
+					is_rival = SPA
+				}
+				AND = {
+					HAB = {
+						is_rival = CAS
+					}
+					NOT = {
+						exists = SPA
+					}
+				}
+			}
+		}
+		NOT = {
+			dynasty = FRA
+		}
+		has_government_attribute = heir
+	}
+	
+	immediate = {
+		set_country_flag = lgFlags_SPAevent0002
+	}
+	
+	option = {
+		name = "lgEvents_flavorSPA.0002.a"
+		add_opinion = { who = HAB modifier = spa_habsburgs_married }
+		HAB = {
+			add_opinion = { who = ROOT modifier = spa_habsburgs_married }
+		}
+	}
+}
+
+# Florida Purchase
+country_event = {
+	id = lgEvents_flavorSPA.0005
+	title = "lgEvents_flavorSPA.0005.t"
+	desc = "lgEvents_flavorSPA.0005.d"
+	picture = CONGRESS_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_florida01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_florida01 }
+		tag = SPA
+		FRA = {
+			ai = yes
+		}
+		OR = {
+			any_province = {
+				colonial_region = colonial_eastern_america
+				OR = {
+					owned_by = FRA
+					owner = {
+						is_colonial_nation_of = FRA
+					}
+				}
+			}
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorSPA.0005.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		reverse_add_opinion = { 
+			who = FRA 
+			modifier = opinion_florida
+			years = 50
+		}
+		every_province = {
+			limit = {
+				colonial_region = colonial_eastern_america
+				OR = {
+					owned_by = FRA
+					owner = {
+						is_colonial_nation_of = FRA
+					}
+				}
+			}
+			owner = {
+				remove_core = PREV
+			}
+			add_core = ROOT
+			cede_province = ROOT
+			if = {
+				limit = {
+					culture = cosmopolitan_french
+				}
+				change_culture = castillian
+			}
+		}
+		FRA = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorSPA.0005.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		reverse_add_opinion = { 
+			who = FRA 
+			modifier = opinion_displeased
+			years = 20
+		}
+	}
+}
+
+# Peru Purchase
+country_event = {
+	id = lgEvents_flavorSPA.0006
+	title = "lgEvents_flavorSPA.0006.t"
+	desc = "lgEvents_flavorSPA.0006.d"
+	picture = CONGRESS_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_peru01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_peru01 }
+		tag = SPA
+		POR = {
+			ai = yes
+		}
+		OR = {
+			any_province = {
+				colonial_region = colonial_peru
+				OR = {
+					owned_by = POR
+					owner = {
+						is_colonial_nation_of = POR
+					}
+				}
+			}
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorSPA.0006.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		reverse_add_opinion = { 
+			who = POR 
+			modifier = opinion_peru
+			years = 50
+		}
+		every_province = {
+			limit = {
+				colonial_region = colonial_peru
+				OR = {
+					owned_by = POR
+					owner = {
+						is_colonial_nation_of = POR
+					}
+				}
+			}
+			owner = {
+				remove_core = PREV
+			}
+			add_core = ROOT
+			cede_province = ROOT
+			if = {
+				limit = {
+					culture = portugese
+				}
+				change_culture = castillian
+			}
+		}
+		POR = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorSPA.0006.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		reverse_add_opinion = { 
+			who = POR 
+			modifier = opinion_displeased
+			years = 20
+		}
+	}
+}
+
+# Colombia Purchase
+country_event = {
+	id = lgEvents_flavorSPA.0007
+	title = "lgEvents_flavorSPA.0007.t"
+	desc = "lgEvents_flavorSPA.0007.d"
+	picture = CONGRESS_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_colombia01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_colombia01 }
+		tag = SPA
+		POR = {
+			ai = yes
+		}
+		OR = {
+			any_province = {
+				colonial_region = colonial_colombia
+				OR = {
+					owned_by = POR
+					owner = {
+						is_colonial_nation_of = POR
+					}
+				}
+			}
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorSPA.0007.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		reverse_add_opinion = { 
+			who = POR 
+			modifier = opinion_colombia
+			years = 50
+		}
+		every_province = {
+			limit = {
+				colonial_region = colonial_colombia
+				OR = {
+					owned_by = POR
+					owner = {
+						is_colonial_nation_of = POR
+					}
+				}
+			}
+			owner = {
+				remove_core = PREV
+			}
+			add_core = ROOT
+			cede_province = ROOT
+			if = {
+				limit = {
+					culture = portugese
+				}
+				change_culture = castillian
+			}
+		}
+		POR = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorSPA.0007.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		reverse_add_opinion = { 
+			who = POR 
+			modifier = opinion_displeased
+			years = 20
+		}
+	}
+}
+
+# California Purchase
+country_event = {
+	id = lgEvents_flavorSPA.0008
+	title = "lgEvents_flavorSPA.0008.t"
+	desc = "lgEvents_flavorSPA.0008.d"
+	picture = CONGRESS_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_california01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_california01 }
+		tag = SPA
+		POR = {
+			ai = yes
+		}
+		any_province = {
+			colonial_region = colonial_california
+			OR = {
+				owned_by = POR
+				owner = {
+					is_colonial_nation_of = POR
+				}
+			}
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorSPA.0008.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		reverse_add_opinion = { 
+			who = POR 
+			modifier = opinion_california
+			years = 50
+		}
+		every_province = {
+			limit = {
+				colonial_region = colonial_california
+				OR = {
+					owned_by = POR
+					owner = {
+						is_colonial_nation_of = POR
+					}
+				}
+			}
+			owner = {
+				remove_core = PREV
+			}
+			add_core = ROOT
+			cede_province = ROOT
+			if = {
+				limit = {
+					culture = portugese
+				}
+				change_culture = castillian
+			}
+		}
+		POR = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorSPA.0008.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		reverse_add_opinion = { 
+			who = POR 
+			modifier = opinion_displeased
+			years = 20
+		}
+	}
+}

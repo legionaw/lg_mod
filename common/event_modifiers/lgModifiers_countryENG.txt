@@ -1,0 +1,72 @@
+##################################################################################################
+# province modifiers
+##################################################################################################
+
+# Gibraltar
+lgModifiers_gibraltar = {
+	#fort_level = 4
+	local_hostile_attrition = 4
+	supply_limit_modifier = 2
+	local_defensiveness = 4
+	#garrison_size = 1
+	picture = "defensiveness"
+	#icon = 7
+}
+
+# Bermuda
+lgModifiers_bermuda = {
+	#fort_level = 4
+	local_hostile_attrition = 2
+	supply_limit_modifier = 1
+	local_defensiveness = 2
+	picture = "defensiveness"
+	#icon = 7
+}
+
+# Singapore
+singapore_defenses = {
+	#fort_level = 4
+	local_hostile_attrition = 2
+	supply_limit_modifier = 1
+	local_defensiveness = 2
+	picture = "defensiveness"
+	#icon = 7
+}
+
+# Royal Naval Dockyard
+lgModifiers_RoyalNavyDockyard = {
+	local_ship_repair = 1
+	ship_recruit_speed = -1
+	naval_forcelimit = 8
+	local_sailors_modifier = 2
+}
+
+# Catholicism Entrenched
+lgModifiers_IrishCatholic = {
+	local_missionary_strength = -1
+	local_religious_conversion_resistance = 2
+}
+
+# Irish Linen Board
+lgModifers_IrishLinenBoard = {
+	trade_goods_size_modifier = 0.1
+}
+
+##################################################################################################
+# country modifiers
+##################################################################################################
+
+# Pitt's Income Tax Act
+lgModifiers_ENGtax = {
+	global_tax_modifier = 0.5
+}
+
+# British colonization Venture
+lgModifiers_ENGcolonization = {
+	colonists = 3
+}
+
+# Parcel of Rogues
+parcel_of_rogues = {
+	global_unrest = 3
+}

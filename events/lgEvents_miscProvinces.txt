@@ -1,0 +1,443 @@
+namespace = lgEvents_miscProvinces
+
+###############################
+# Important Centers of Trade  #
+###############################
+
+# Halifax
+country_event = {
+	id = lgEvents_miscProvinces.0001
+	title = "lgEvents_miscProvinces.0001.t"
+	desc = "lgEvents_miscProvinces.0001.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		technology_group = western
+		owns = 2569
+		2569 = {
+			NOT = { province_has_center_of_trade_of_level = 1 }
+			is_colony = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.25
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 0.25
+			culture_group = british
+		}
+		modifier = {
+			factor = 0.25
+			religion = protestant
+		}
+		modifier = {
+			factor = 1.25
+			NOT = {
+				culture_group = british
+			}
+		}
+	}
+	
+	option = {
+		name = "lgEvents_miscProvinces.0001.a"
+		2569 = {
+			center_of_trade = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+# Boston	
+#country_event = {
+#	id = lgEvents_miscProvinces.0002
+#	title = "lgEvents_miscProvinces.0002.t"
+#	desc = "lgEvents_miscProvinces.0002.d"
+#	picture = MERCHANTS_TALKING_eventPicture
+#	
+#	trigger = {
+#		technology_group = western
+#		owns = 968
+#		968 = {
+#			province_has_center_of_trade_of_level = 1
+#		}
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 120
+#		modifier = {
+#			factor = 0.25
+#			is_colonial_nation = yes
+#		}
+#		modifier = {
+#			factor = 0.25
+#			culture_group = british
+#		}
+#		modifier = {
+#			factor = 0.25
+#			religion = protestant
+#		}
+#	}
+#	
+#	option = {
+#		name = "lgEvents_miscProvinces.0002.a"
+#
+#		968 = {
+#			add_base_tax = 1
+#			add_base_production = 1
+#			add_base_manpower = 1
+#		}
+#	}
+#}
+
+# Manhattan	becomes Center of Trade
+country_event = {
+	id = lgEvents_miscProvinces.0003
+	title = "lgEvents_miscProvinces.0003.t"
+	desc = "lgEvents_miscProvinces.0003.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		technology_group = western
+		owns = 965
+		965 = {
+			NOT = { province_has_center_of_trade_of_level = 1 }
+			is_colony = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.25
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 0.25
+			culture_group = british
+		}
+		modifier = {
+			factor = 0.25
+			religion = protestant
+		}
+		modifier = {
+			factor = 1.25
+			NOT = {
+				culture_group = british
+			}
+		}
+	}
+	
+	option = {
+		name = "lgEvents_miscProvinces.0003.a"
+
+		965 = {
+			center_of_trade = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+# Paducah
+country_event = {
+	id = lgEvents_miscProvinces.0004
+	title = "lgEvents_miscProvinces.0004.t"
+	desc = "lgEvents_miscProvinces.0004.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		technology_group = western
+		owns = 939
+		939 = {
+			NOT = { province_has_center_of_trade_of_level = 1 }
+			is_colony = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.25
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 0.25
+			culture_group = british
+		}
+		modifier = {
+			factor = 0.25
+			religion = protestant
+		}
+		modifier = {
+			factor = 1.25
+			NOT = {
+				culture_group = british
+			}
+		}
+	}
+	
+	option = {
+		name = "lgEvents_miscProvinces.0004.a"
+		939 = {
+			center_of_trade = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+# Seattle
+country_event = {
+	id = lgEvents_miscProvinces.0005
+	title = "lgEvents_miscProvinces.0005.t"
+	desc = "lgEvents_miscProvinces.0005.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	trigger = {
+		technology_group = western
+		owns = 874
+		874 = {
+			NOT = { province_has_center_of_trade_of_level = 1 }
+			is_colony = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.25
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 0.25
+			culture_group = british
+		}
+		modifier = {
+			factor = 0.25
+			religion = protestant
+		}
+		modifier = {
+			factor = 1.25
+			NOT = {
+				culture_group = british
+			}
+		}
+	}
+	
+	option = {
+		name = "lgEvents_miscProvinces.0005.a"
+		874 = {
+			center_of_trade = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+# Hawaii turns to sugar growing and becomes an important stopping point
+country_event = {
+	id = lgEvents_miscProvinces.0006
+	title = "lgEvents_miscProvinces.0006.t"
+	desc = "lgEvents_miscProvinces.0006.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = {
+		technology_group = western
+		owns = 1240
+		1240 = {
+			is_core = ROOT
+			NOT = { is_colony = yes }
+			NOT = { trade_goods = sugar }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "lgEvents_miscProvinces.0006.a"
+		1240 = {
+			change_trade_goods = sugar
+			center_of_trade = 1
+			add_base_tax = 1
+			add_base_production = 1
+		}
+	}
+}
+
+# Philadelphia
+country_event = {
+	id = lgEvents_miscProvinces.0007
+	title = "lgEvents_miscProvinces.0007.t"
+	desc = "lgEvents_miscProvinces.0007.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		technology_group = western
+		owns = 956
+		956 = {
+			NOT = { province_has_center_of_trade_of_level = 1 }
+			is_colony = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.25
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 0.25
+			culture_group = british
+		}
+		modifier = {
+			factor = 0.25
+			religion = protestant
+		}
+		modifier = {
+			factor = 1.25
+			NOT = {
+				culture_group = british
+			}
+		}
+	}
+	
+	option = {
+		name = "lgEvents_miscProvinces.0007.a"
+		956 = {
+			center_of_trade = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+# Louisville
+country_event = {
+	id = lgEvents_miscProvinces.0008
+	title = "lgEvents_miscProvinces.0008.t"
+	desc = "lgEvents_miscProvinces.0008.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		technology_group = western
+		owns = 940
+		940 = {
+			NOT = { province_has_center_of_trade_of_level = 1 }
+			is_colony = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.25
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 0.25
+			culture_group = british
+		}
+		modifier = {
+			factor = 0.25
+			religion = protestant
+		}
+		modifier = {
+			factor = 0.25
+			religion = anglican
+		}
+		modifier = {
+			factor = 1.25
+			NOT = {
+				culture_group = british
+			}
+		}
+	}
+	
+	option = {
+		name = "lgEvents_miscProvinces.0008.a"
+		940 = {
+			center_of_trade = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+# Los Angeles
+country_event = {
+	id = lgEvents_miscProvinces.0009
+	title = "lgEvents_miscProvinces.0009.t"
+	desc = "lgEvents_miscProvinces.0009.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		technology_group = western
+		owns = 868
+		868 = {
+			NOT = { province_has_center_of_trade_of_level = 1 }
+			is_colony = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.25
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 0.25
+			culture = castillian
+		}
+		modifier = {
+			factor = 0.25
+			religion = protestant
+		}
+		modifier = {
+			factor = 0.25
+			religion = anglican
+		}
+		modifier = {
+			factor = 1.25
+			NOT = {
+				culture = castillian
+			}
+		}
+	}
+	
+	option = {
+		name = "lgEvents_miscProvinces.0009.a"
+		868 = {
+			center_of_trade = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}

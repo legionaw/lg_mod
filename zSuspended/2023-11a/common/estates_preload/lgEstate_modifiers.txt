@@ -1,0 +1,17 @@
+lgEstate_state = {
+	modifier_definition = {
+		type = loyalty
+		key = lgEstate_state_loyalty_modifier
+		trigger = {
+			has_estate = lgEstate_state
+		}
+	}
+	
+	modifier_definition = {
+		type = influence
+		key = lgEstate_state_influence_modifier
+		trigger = {
+			has_estate = lgEstate_state
+		}
+	}
+}

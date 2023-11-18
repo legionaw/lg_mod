@@ -1,0 +1,59 @@
+lgTriggers_AmericanCrisis = {
+	is_year = 1775
+	capital_scope = {
+		colonial_region = colonial_eastern_america
+		is_core = ROOT
+	}
+	culture_group = british
+	NOT = { exists = USA }
+}
+
+lgTriggers_MexicoCrisis = {
+	is_year = 1810
+	capital_scope = {
+		colonial_region = colonial_mexico
+		is_core = ROOT
+	}
+	primary_culture = castillian
+	NOT = { exists = MEX }
+}
+
+lgTriggers_BrazilCrisis = {
+	is_year = 1822
+	capital_scope = {
+		colonial_region = colonial_brazil
+		is_core = ROOT
+	}
+	primary_culture = portugese
+	NOT = { exists = BRZ }
+}
+
+lgTriggers_ColombiaCrisis = {
+	is_year = 1810
+	capital_scope = {
+		colonial_region = colonial_colombia
+		is_core = ROOT
+	}
+	primary_culture = castillian
+	#NOT = { exists = MEX }
+}
+
+lgTriggers_PeruCrisis = {
+	is_year = 1811
+	capital_scope = {
+		colonial_region = colonial_colombia
+		is_core = ROOT
+	}
+	primary_culture = castillian
+	#NOT = { exists = MEX }
+}
+
+lgTriggers_LaPlataCrisis = {
+	is_year = 1810
+	capital_scope = {
+		colonial_region = colonial_la_plata
+		is_core = ROOT
+	}
+	primary_culture = castillian
+	#NOT = { exists = MEX }
+}

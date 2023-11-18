@@ -1,0 +1,136 @@
+###########################################
+# The Crisis
+###########################################
+# Ming Crisis
+lgModifiers_MingCrisis = {
+	potential = {
+	}
+	trigger = {
+		ai = yes
+		tag = MNG
+		is_year = 1618
+		is_emperor_of_china = yes
+		NOT = { has_country_flag = ming_crisis_happened }
+	}
+	
+	imperial_mandate = -1
+	global_unrest = 5
+	global_autonomy = 0.02
+	global_tax_modifier = -0.1
+	stability_cost_modifier = 0.5
+	yearly_corruption = 1
+}
+
+# French Crisis
+lgModifiers_FrenchCrisis = {
+	potential = {
+	}
+	trigger = {
+		ai = yes
+		tag = FRA
+		is_year = 1781
+		NOT = { has_country_flag = had_revolution }
+		is_free_or_tributary_trigger = yes
+		has_any_disaster = no
+	}
+	
+	prestige_decay = 1
+	interest = 0.5
+	inflation_reduction = -2
+	land_maintenance_modifier = 1
+	fort_maintenance_modifier = 1
+	merc_maintenance_modifier = 1
+	trade_efficiency = -2
+	production_efficiency = -3
+	global_unrest = 20
+	global_tax_modifier = -3
+	stability_cost_modifier = 4
+	yearly_corruption = 1
+	prestige = -10
+	global_tariffs = -1
+}
+
+# American Crisis - Liberty Aspirations
+lgModifiers_AmericanCrisis = {
+	potential = {
+	}
+	trigger = {
+		ai = yes
+		has_any_disaster = no
+		lgTriggers_AmericanCrisis = yes
+		NOT = { # to enable their participation in any wars involving colonial nations at war with Britain
+			any_country = {
+				capital_scope = {
+					OR = {
+						superregion = south_america_superregion
+						superregion = north_america_superregion
+						superregion = central_america_superregion
+					}
+				}
+				war_with = ROOT
+			}
+		}
+	}
+	
+	#liberty_desire_from_subject_development 
+	liberty_desire = 10000
+}
+
+# American Crisis - Empire of Liberty
+lgModifiers_AmericanCrisis2 = {
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		ai = yes
+		is_year = 1775
+		capital_scope = {
+			colonial_region = colonial_eastern_america
+			is_core = ROOT
+		}
+		culture_group = british
+		NOT = { exists = USA }
+		has_any_disaster = no
+	}
+	
+	#global_tax_modifier = 1
+	#production_efficiency = 1
+	#trade_efficiency = 1
+	#global_trade_goods_size_modifier = 1
+	#state_maintenance_modifier = -1
+	#global_regiment_cost = -1
+	global_regiment_recruit_speed = -1
+	#land_maintenance_modifier = -1
+	#merc_maintenance_modifier = -1
+	#mercenary_cost = -1
+	fort_maintenance_modifier = -1
+	republican_tradition = 1
+	recover_army_morale_speed = 0.75
+	recover_navy_morale_speed = 0.75
+	fire_damage_received = -1
+	shock_damage_received = -1
+	land_morale = 1
+	reinforce_speed = 1
+	manpower_recovery_speed = 1
+}
+
+# American Crisis - Liberty Aspirations
+lgModifiers_AmericanCrisis3 = {
+	potential = {
+	}
+	trigger = {
+		ai = yes
+		has_any_disaster = no
+		OR = {
+			lgTriggers_MexicoCrisis = yes
+			lgTriggers_BrazilCrisis = yes
+			lgTriggers_ColombiaCrisis = yes
+			lgTriggers_PeruCrisis = yes
+			lgTriggers_LaPlataCrisis = yes
+		}
+	}
+	
+	#liberty_desire_from_subject_development 
+	liberty_desire = 10000
+}

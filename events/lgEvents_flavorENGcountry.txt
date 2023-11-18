@@ -1,0 +1,265 @@
+namespace = lgEventsENG
+
+################################################
+# Country Events			 												 #
+################################################
+
+# Colonization Venture
+country_event = {
+	id = lgEventsENG.0001
+	title = "lgEventsENG.0001t"
+	desc = "lgEventsENG.0001d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		NOT = {
+			has_country_flag = lgFlags_ENGcolonization
+		}
+		lgTriggers_british = yes
+		num_of_colonists = 1
+		num_of_ports = 1
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.5
+			is_year = 1550
+		}
+		modifier = {
+			factor = 0.4
+			is_year = 1600
+		}
+		modifier = {
+			factor = 0.3
+			is_year = 1650
+		}
+		modifier = {
+			factor = 0.2
+			is_year = 1700
+		}
+		modifier = {
+			factor = 0.2
+			is_year = 1750
+		}
+		modifier = {
+			factor = 0.2
+			is_year = 1800
+		}
+	}
+	
+	option = {			# Yes
+		name = "lgEventsENG.0001a"
+		ai_chance = { factor = 70 }
+		add_country_modifier = {
+			name = lgModifiers_ENGcolonization
+			duration = -1
+		}
+		add_prestige = 10
+		set_country_flag = lgFlags_ENGcolonization
+	}
+	
+	option = {			# No
+		name = "lgEventsENG.0001b"
+		ai_chance = { factor = 30 }
+		add_prestige = -10
+	}
+}
+
+# Repeal of the Pitt's Income Tax
+country_event = {
+	id = lgEventsENG.0002
+	title = "lgEventsENG.0002t"
+	desc = "lgEventsENG.0002d"
+	picture = ECONOMY_eventPicture
+	
+	trigger = { 
+		has_country_modifier = lgModifiers_ENGtax
+		is_at_war = no 
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {			# OK
+		name = "lgEventsENG.0002a"
+		remove_country_modifier = lgModifiers_ENGtax 
+	}
+}
+
+# The Rise of the Tudors
+country_event = { 
+	id = lgEventsENG.0005
+	title = lgEventsENG.0005t
+	desc = lgEventsENG.0005d
+	picture = DIPLOMACY_eventPicture
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		lgTriggers_british = yes
+		NOT = { dynasty = "Tudor" }
+		NOT = {
+			has_country_flag = war_of_the_roses_ended
+		}
+		OR = {
+			dynasty = York
+			dynasty = Lancaster
+		}
+		is_lesser_in_union = no
+		has_government_attribute = heir
+		NOT = { had_country_flag = { flag = war_of_the_roses_was_had days = 3650 } } #If you're under a union and get out of it quickly enough you'll still get this but otherwise you won't.
+		is_year = 1509
+		NOT = { has_country_flag = lgFlags_tudorEvent }
+	}
+	
+	immediate = {
+		set_country_flag = lgFlags_tudorEvent
+	}
+	
+	option = {
+	name = lgEventsENG.0005a  # There will never be reconciliation between our two houses
+		ai_chance = { factor = 0 }
+		every_owned_province = {
+			add_province_modifier = {
+				name = add_unrest_5_modifier
+				duration = 1825
+			}
+		}
+		add_prestige = 10
+	}
+
+	option = {
+		name = lgEventsENG.0005b  # It is time for peace, let us join our two houses together in marriage 
+		ai_chance = { factor = 100 }
+		add_stability_or_adm_power = yes
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = {
+				allow_new_heir = no
+			}
+		}
+		define_heir = {
+			claim = 100
+			name = "Henry #0"
+			dynasty = "Tudor"
+			culture = english
+			adm = 3
+			dip = 4
+			mil = 2
+			age = 24
+		}
+		add_heir_personality = midas_touched_personality
+		add_heir_personality = calm_personality
+		add_heir_personality = lawgiver_personality
+		add_heir_personality = immortal_personality
+		set_heir_flag = lgFlags_tudor
+	}
+}
+
+# Entrenchment of Catholicism in Ireland
+country_event = { 
+	id = lgEventsENG.0006
+	title = lgEventsENG.0006t
+	desc = lgEventsENG.0006d
+	picture = DIPLOMACY_eventPicture
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		OR = {
+			lgTriggers_british = yes
+			AND = {
+				tag = IRE
+				OR = {
+					is_subject_of = ENG
+					is_subject_of = GBR
+				}
+			}
+		}
+		OR = {
+			religion = protestant
+			religion = anglican
+		}
+		any_owned_province = {
+			is_capital = no
+			lgTriggers_ireland = yes
+			NOT = { area = ulster_area }
+			NOT = { has_province_modifier = lgModifiers_IrishCatholic }
+		}
+	}
+	
+	option = {
+	name = lgEventsENG.0006.a  # OK
+		every_owned_province = {
+			limit = {
+				is_capital = no
+				OR = {
+					area = munster_area
+					area = connacht_area
+					area = leinster_area
+				}
+				NOT = { area = ulster_area }
+				NOT = { has_province_modifier = lgModifiers_IrishCatholic }
+			}
+			add_province_modifier = {
+				name = "lgModifiers_IrishCatholic"
+				duration = -1
+			}
+			if = {
+				limit = {
+					NOT = {
+						religion = catholic
+					}
+				}
+				change_religion = catholic
+			}
+		}
+	}
+}
+
+# Establishment of HM Diplomatic Service
+country_event = {
+	id = lgEventsENG.0007
+	title = "lgEventsENG.0007t"
+	desc = "lgEventsENG.0007d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		lgTriggers_british = yes
+		NOT = { has_country_flag = lgFlags_DiplomaticCorps }
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.5
+			is_year = 1550
+		}
+	}
+	
+	option = {			# Yes
+		name = "lgEventsENG.0007a"
+		ai_chance = { factor = 70 }
+		add_country_modifier = {
+			name = lgModifiers_DiplomaticCorps
+			duration = -1
+		}
+		add_prestige = 10
+		add_dip_power = 100
+		set_country_flag = lgFlags_DiplomaticCorps
+	}
+	
+	option = {			# No
+		name = "lgEventsENG.0007b"
+		ai_chance = { factor = 30 }
+		add_prestige = -10
+	}
+}

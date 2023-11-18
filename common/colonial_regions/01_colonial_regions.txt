@@ -1,0 +1,38 @@
+# New Zealand
+colonial_new_zealand = {
+	color = { 0 135 81 }
+
+	provinces = {
+		1106 1107 1108 1109 1246 2737 2738 2739
+	}
+
+	trade_goods = {
+		fish = 15
+		naval_supplies = 3
+		coffee = 3
+		wool = 2
+		copper = 1
+		sugar = 1
+	}
+	
+	culture = {
+		papuan = 2
+		polynesian = 10
+		melanesian = 10
+		moluccan = 2
+	}
+	
+	religion = {
+		animism = 10
+	}
+
+	# Specific
+
+	# Generic
+	names = {
+		name = "COLONIAL_NEW_ZEALAND_New_Zealand"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}

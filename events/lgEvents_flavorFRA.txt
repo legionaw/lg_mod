@@ -1,0 +1,754 @@
+namespace = lgEvents_flavorFRA
+
+# The Rise of the Bourbons
+country_event = {
+	id = lgEvents_flavorFRA.0001
+	title = lgEvents_flavorFRA.0001t
+	desc = lgEvents_flavorFRA.0001d
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.5
+			dynasty = "de Trastámara"
+		}
+		modifier = {
+			factor = 0.1
+			is_year = 1574
+		}
+	}
+	
+	trigger = {
+		tag = FRA
+		ai = yes
+		is_free_or_tributary_trigger = yes
+		government = monarchy
+		is_year = 1574
+		NOT = {
+			is_year = 1830
+		}
+		NOT = { dynasty = "de Bourbon" }
+		NOT = { dynasty = "Bonaparte" }
+		heir_has_ruler_dynasty = yes
+		# NOT = { has_country_flag = bourbon_event }
+	}
+	
+	immediate = {
+		set_country_flag = bourbon_event
+	}
+	
+	option = {
+	name = lgEvents_flavorFRA.0001a  # There will never be reconciliation between our two houses
+		ai_chance = { factor = 0 }
+		every_owned_province = {
+			add_province_modifier = {
+				name = add_unrest_5_modifier
+				duration = 1825
+			}
+		}
+		add_prestige = 10
+	}
+	
+	option = {
+		name = lgEvents_flavorFRA.0001b  # It is time for peace, let us join our two houses together in marriage 
+		ai_chance = { factor = 100 }
+		add_stability = 1
+		define_heir = {
+			claim = 100
+			name = "Henri #0"
+			dynasty = "de Bourbon"
+			adm = 6
+			dip = 6
+			mil = 6
+			age = 28
+		}
+	}
+}
+
+# French ambitions on Algeria
+country_event = { 
+	id = lgEvents_flavorFRA.0002
+	title = lgEvents_flavorFRA.0002t
+	desc = lgEvents_flavorFRA.0002d
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.3
+			is_year = 1600
+		}
+		modifier = {
+			factor = 0.2
+			is_year = 1750
+		}
+		modifier = {
+			factor = 0.1
+			is_year = 1800
+		}
+	}
+	
+	trigger = {
+		tag = FRA
+		ai = yes
+		is_year = 1500
+		NOT = {
+			has_country_flag = french_claims_on_algiers
+		}
+	}
+	
+	immediate = {
+		set_country_flag = french_claims_on_algiers
+	}
+	
+	option = {
+	name = lgEvents_flavorFRA.0002a  # Nah.
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+	
+	option = {
+		name = lgEvents_flavorFRA.0002b  # We won't forget this.
+		ai_chance = { factor = 100 }
+		algiers_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				range = ROOT
+				has_discovered = ROOT
+				owner = {
+					religion_group = muslim
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		kabylia_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				range = ROOT
+				has_discovered = ROOT
+				owner = {
+					religion_group = muslim
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		if = {
+			limit = {
+				any_known_country = {
+					any_owned_province = {
+						OR = {
+							area = algiers_area
+							area = kabylia_area
+						}
+					}
+					religion_group = muslim
+					NOT = {
+						alliance_with = ROOT
+					}
+					NOT = {
+						war_with = ROOT
+					}
+				}
+			}
+			add_opinion = { who = PREV modifier = opinion_angry }
+			PREV = {
+				add_opinion = { who = ROOT modifier = threatening_punishment }
+				country_event = { id = lgEvents_flavorFRA.0003 days = 1 }
+			}
+		}
+		add_prestige = 10
+	}
+}
+
+# Response in Algeria to French threats
+country_event = { 
+	id = lgEvents_flavorFRA.0003
+	title = lgEvents_flavorFRA.0003t
+	desc = lgEvents_flavorFRA.0003d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = lgEvents_flavorFRA.0003a  # This is outrageous!
+		ai_chance = { factor = 0 }
+		tooltip = {
+			FRA = {
+				add_opinion = { who = ROOT modifier = opinion_angry }
+			}
+			ROOT = {
+				add_opinion = { who = FRA modifier = threatening_punishment }
+				country_event = { id = lgEvents_flavorFRA.0003 days = 1 }
+			}
+		}
+	}
+}
+
+# French ambitions on Indochina
+country_event = { 
+	id = lgEvents_flavorFRA.0004
+	title = lgEvents_flavorFRA.0004t
+	desc = lgEvents_flavorFRA.0004d
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	
+		modifier = {
+			factor = 0.3
+			is_year = 1600
+		}
+		modifier = {
+			factor = 0.2
+			is_year = 1750
+		}
+		modifier = {
+			factor = 0.1
+			is_year = 1800
+		}
+	}
+
+	trigger = {
+		tag = FRA
+		ai = yes
+		is_year = 1500
+		NOT = {
+			has_country_flag = french_claims_on_indochina
+		}
+		champa_area = {
+			has_port = yes
+			range = ROOT
+			has_discovered = ROOT
+		}
+		mekong_area = {
+			has_port = yes
+			range = ROOT
+			has_discovered = ROOT
+		}
+		vietnam_area = {
+			has_port = yes
+			range = ROOT
+			has_discovered = ROOT
+		}
+	}
+	
+	immediate = {
+		set_country_flag = french_claims_on_indochina
+	}
+	
+	option = {
+	name = lgEvents_flavorFRA.0004a  # Nah.
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+	
+	option = {
+		name = lgEvents_flavorFRA.0004b  # We won't forget this.
+		ai_chance = { factor = 100 }
+		champa_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				range = ROOT
+				has_discovered = ROOT
+				owner = {
+					NOT = {
+						religion_group = christian
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		mekong_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				range = ROOT
+				has_discovered = ROOT
+				owner = {
+					NOT = {
+						religion_group = christian
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		vietnam_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				range = ROOT
+				has_discovered = ROOT
+				owner = {
+					NOT = {
+						religion_group = christian
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		add_prestige = 10
+	}
+}
+
+## Troubles in France
+country_event = {
+	id = lgEvents_flavorFRA.0005
+	title = lgEvents_flavorFRA.0005t
+	desc = lgEvents_flavorFRA.0005d
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.1
+			is_year = 1800
+		}
+	}
+	
+	trigger = {
+		tag = FRA
+		ai = yes
+		is_subject = no
+		is_year = 1789
+		NOT = { revolution_target_exists = yes }
+		NOT = { has_country_flag = had_revolution }
+		num_of_cities = 30
+		NOT = {
+			has_country_flag = lgFlag_FrenchTroubles
+		}
+		has_any_disaster = no
+		#has_country_modifier = lgModifiers_FrenchCrisis
+#		NOT = {
+#			has_country_modifier = french_troubles
+#		}
+	}
+	
+	option = {
+	name = EVTOPTA3097
+		add_stability = -6
+		set_country_flag = lgFlag_FrenchTroubles
+#		add_country_modifier = {
+#			name = "french_troubles"
+#			duration = -1
+#		}
+	}
+}
+
+## End of Troubles in France
+#country_event = {
+#	id = lgEvents_flavorFRA.0006
+#	title = lgEvents_flavorFRA.0006t
+#	desc = lgEvents_flavorFRA.0006d
+#	picture = DIPLOMACY_eventPicture
+#	
+#	major = yes
+#	
+#	mean_time_to_happen = {
+#		months = 1
+#	}
+#	
+#	trigger = {
+#		ai = yes
+#		is_subject = no
+#		is_year = 1789
+#		revolution_target_exists = yes
+#		has_country_flag = had_revolution
+#		num_of_cities = 30
+#		has_country_flag = lgFlag_FrenchTroubles
+#		#has_country_modifier = french_troubles
+#		NOT = {
+#			has_disaster = french_revolution
+#		}
+#	}
+#	
+#	option = {
+#		name = lgEvents_flavorFRA.0006a  # Phew
+#		#remove_country_modifier = french_troubles
+#	}
+#}
+
+# The Louisiana Purchase
+country_event = {
+	id = lgEvents_flavorFRA.0007
+	title = "lgEvents_flavorFRA.0007.t"
+	desc = "lgEvents_flavorFRA.0007.d"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_louisiana01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_louisiana01 }
+		CAS = {
+			ai = yes
+		}
+		tag = FRA
+		colonial_louisiana = {
+			OR = {
+				owned_by = CAS
+				owner = {
+					is_colonial_nation_of = CAS
+				}
+			}
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorFRA.0007.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		add_opinion = { 
+			who = CAS
+			modifier = opinion_louisiana
+			years = 50
+		}
+		every_province = {
+			limit = {
+				colonial_region = colonial_louisiana
+				OR = {
+					owned_by = CAS
+					owner = {
+						is_colonial_nation_of = CAS
+					}
+				}
+			}
+			owner = {
+				remove_core = PREV
+			}
+			add_core = ROOT
+			cede_province = ROOT
+			if = {
+				limit = {
+					culture = castillian
+				}
+				change_culture = cosmopolitan_french
+			}
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorFRA.0007.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		add_opinion = { 
+			who = CAS
+			modifier = opinion_disappointed
+			years = 20
+		}
+	}
+}
+
+# The Canada Purchase
+country_event = {
+	id = lgEvents_flavorFRA.0008
+	title = "lgEvents_flavorFRA.0008.t"
+	desc = "lgEvents_flavorFRA.0008.d"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_canada01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_canada01 }
+		SPA = {
+			ai = yes
+		}
+		tag = FRA
+		OR = {
+			num_of_owned_provinces_with = {
+				colonial_region = colonial_canada
+				value = 4
+			}
+			colonial_canada = {
+				owner = {
+					is_colonial_nation_of = SPA
+				}
+			}
+		}
+#		colonial_canada = {
+#			OR = {
+#				owned_by = SPA
+#				owner = {
+#					is_colonial_nation_of = SPA
+#				}
+#			}
+#		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorFRA.0008.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		add_opinion = { 
+			who = SPA
+			modifier = opinion_canada
+			years = 50
+		}
+		every_province = {
+			limit = {
+				colonial_region = colonial_canada
+				OR = {
+					owned_by = SPA
+					owner = {
+						is_colonial_nation_of = SPA
+					}
+				}
+			}
+			owner = {
+				remove_core = PREV
+			}
+			add_core = ROOT
+			cede_province = ROOT
+			if = {
+				limit = {
+					culture = castillian
+				}
+				change_culture = cosmopolitan_french
+			}
+		}
+		SPA = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorFRA.0008.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		add_opinion = { 
+			who = SPA
+			modifier = opinion_disappointed
+			years = 20
+		}
+	}
+}
+
+# The Breton Purchase
+country_event = {
+	id = lgEvents_flavorFRA.0009
+	title = "lgEvents_flavorFRA.0009.t"
+	desc = "lgEvents_flavorFRA.0009.d"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_brittany01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_brittany01 }
+		SCO = {
+			ai = yes
+		}
+		tag = FRA
+		brittany_area = {
+			owned_by = SCO
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorFRA.0009.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		add_opinion = { 
+			who = SCO
+			modifier = opinion_brittany
+			years = 50
+		}
+		every_province = {
+			limit = {
+				area = brittany_area
+				owned_by = SCO
+			}
+			remove_core = SCO
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		SCO = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorFRA.0009.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		add_opinion = { 
+			who = SCO
+			modifier = opinion_disappointed
+			years = 20
+		}
+	}
+}
+
+# The Guadelupe Purchase
+country_event = {
+	id = lgEvents_flavorFRA.0010
+	title = "lgEvents_flavorFRA.0010.t"
+	desc = "lgEvents_flavorFRA.0010.d"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_guadelupe01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_guadelupe01 }
+		tag = FRA
+		496 = {
+			OR = {
+				owned_by = ENG
+				owner = {
+					is_colonial_nation_of = ENG
+				}
+			}
+			has_discovered = FRA
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorFRA.0010.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		add_opinion = { 
+			who = ENG
+			modifier = opinion_guadelupe
+			years = 50
+		}
+		496 = {
+			if = {
+				limit = {
+					OR = {
+						owned_by = ENG
+						owner = {
+							is_colonial_nation_of = ENG
+						}
+					}
+				}
+				remove_core = PREV
+				add_core = ROOT
+				cede_province = ROOT
+			}
+			if = {
+				limit = {
+					culture = english
+				}
+				change_culture = cosmopolitan_french
+			}
+		}
+		ENG = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorFRA.0010.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		add_opinion = { 
+			who = ENG
+			modifier = opinion_disappointed
+			years = 20
+		}
+	}
+}
+
+# The Martinique Purchase
+country_event = {
+	id = lgEvents_flavorFRA.0011
+	title = "lgEvents_flavorFRA.0011.t"
+	desc = "lgEvents_flavorFRA.0011.d"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_martinique01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_martinique01 }
+		tag = FRA
+		498 = {
+			OR = {
+				owned_by = ENG
+				owner = {
+					is_colonial_nation_of = ENG
+				}
+			}
+			has_discovered = FRA
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorFRA.0011.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		add_opinion = { 
+			who = ENG
+			modifier = opinion_martinique
+			years = 50
+		}
+		498 = {
+			if = {
+				limit = {
+					OR = {
+						owned_by = ENG
+						owner = {
+							is_colonial_nation_of = ENG
+						}
+					}
+				}
+				remove_core = PREV
+				add_core = ROOT
+				cede_province = ROOT
+			}
+			if = {
+				limit = {
+					culture = english
+				}
+				change_culture = cosmopolitan_french
+			}
+		}
+		ENG = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorFRA.0011.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		add_opinion = { 
+			who = ENG
+			modifier = opinion_disappointed
+			years = 20
+		}
+	}
+}

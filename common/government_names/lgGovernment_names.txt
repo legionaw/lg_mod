@@ -1,0 +1,85 @@
+# For specific government types
+# Will pick the first valid one it finds in list
+
+british_monarchy = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = KINGDOM
+	}
+
+	ruler_male = {
+		1 = DUKE
+		2 = KING
+		3 = KING
+	}
+
+	ruler_female = {
+		1 = DUCHESS
+		2 = QUEEN
+		3 = QUEEN
+	}
+
+	trigger = {
+		lgTriggers_british = yes
+		government = monarchy
+	}
+}
+
+european_monarchy = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = KINGDOM
+	}
+
+	ruler_male = {
+		1 = DUKE
+		2 = KING
+		3 = KING
+	}
+
+	ruler_female = {
+		1 = DUCHESS
+		2 = QUEEN
+		3 = QUEEN
+	}
+
+	trigger = {
+		OR = {
+			tag = CAS
+			tag = SPA
+			tag = POR
+			tag = PRU
+			tag = SAV
+			tag = SPI
+			tag = ITA
+		}
+		government = monarchy
+	}
+}
+
+gov_american_republic = {
+	rank = {
+		1 = REPUBLIC
+		2 = REPUBLIC
+		3 = REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = PRESIDENT
+		2 = PRESIDENT
+		3 = PRESIDENT
+	}
+	
+	ruler_female = {
+		1 = PRESIDENT_fem
+		2 = PRESIDENT_fem
+		3 = PRESIDENT_fem
+	}
+	
+	trigger = {
+		government = republic
+		has_reform = american_republic
+	}
+}

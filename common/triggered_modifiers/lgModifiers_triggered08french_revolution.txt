@@ -1,0 +1,34 @@
+# French Revolutionary War - French Helper
+lgModifiers_FrenchRevWar_FRA = {
+	potential = {
+	}
+	trigger = {
+		ai = yes
+		tag = FRA
+		is_year = 1791
+		has_country_flag = had_revolution
+		OR = {
+			has_reform = revolutionary_republic
+			has_reform = revolutionary_empire
+		}
+		is_free_or_tributary_trigger = yes
+		#has_any_disaster = no
+	}
+	
+	diplomatic_annexation_cost = -0.5
+	province_warscore_cost = -1
+	harsh_treatment_cost = -0.5
+	reinforce_speed = 0.33
+	defensiveness = 0.5
+	global_regiment_recruit_speed = 0.5
+	global_regiment_cost = -0.5
+	land_maintenance_modifier = -0.5
+	global_manpower_modifier = 0.5
+	manpower_recovery_speed = 0.5
+	land_forcelimit_modifier = 0.5
+	recover_army_morale_speed = 0.5
+	army_tradition_decay = -0.5 
+	navy_tradition_decay = 0.5
+	artillery_power = 0.5
+	ae_impact = 0.83
+}

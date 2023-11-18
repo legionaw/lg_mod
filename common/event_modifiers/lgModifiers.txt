@@ -1,0 +1,42 @@
+# Colonization Venture
+custom_colonization = {
+	colonists = 1
+}
+
+# Temporary Tax Hike
+tax_hike = {
+	global_tax_modifier = 0.1
+}
+
+# Missionary Boost
+missionary_boost = {
+	global_missionary_strength = 1.0
+}
+
+# Merchant Venture
+approved_merchant_venture = {
+	merchants = 3
+}
+
+# Diplomatic Corps
+lgModifiers_DiplomaticCorps = {
+	diplomats = 3
+}
+
+# Westernized
+lg_westernized = { }
+
+lgModifiers_blocker = { }
+lgModifiers_blockerADM = { }
+lgModifiers_blockerADM2 = { }
+lgModifiers_blockerMIL = { }
+lgModifiers_blockerMIL2 = { }
+lgModifiers_blockerDIP = { }
+lgModifiers_blockerDIP2 = { }
+lgModifiers_blockerMobilized = { }
+lgModifiers_conscripted0 = { }
+
+lgModifiers_millet = {
+	local_missionary_strength = -1
+	local_tax_modifier = 0.25
+}

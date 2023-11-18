@@ -1,0 +1,61 @@
+lgSubjectTypes_PrincelyStates = {
+	copy_from = vassal
+	
+	# Graphics:
+	sprite = GFX_icon_princely_state
+	diplomacy_overlord_sprite = GFX_diplomacy_leader_princely_state
+	diplomacy_subject_sprite = GFX_diplomacy_am_princely_state
+	
+	# Properties:
+	overlord_can_attack = no
+	overlord_can_be_subject = yes
+	can_have_subjects_of_other_types = yes
+	overlord_enforce_peace_attacking = yes
+	can_send_missionary_to_subject = no
+	
+	max_government_rank = 1
+	
+	military_focus = 1
+	
+#	forcelimit_bonus = 0.1
+	forcelimit_to_overlord = 0.1
+#	manpower_bonus = 0.1
+	manpower_to_overlord = 0.1
+#	naval_forcelimit_bonus = 0.1
+	naval_forcelimit_to_overlord = 0.1
+#	sailors_bonus = 0.1
+	sailors_to_overlord = 0.1
+	
+	base_liberty_desire = -10.0
+	liberty_desire_development_ratio = 0.05
+	
+	relative_power_class = 2
+	takes_diplo_slot = no
+	gets_help_with_rebels = yes
+	
+	liberty_desire_revolution = 10
+	
+	# Subject Interactions:
+	# (continuous)
+	subsidize_armies = yes
+	send_officers = yes
+	# (immediate)
+	block_settlement_growth = no
+	allow_settlement_growth = no
+	enforce_religion = no
+	send_additional_troops = yes
+	bestow_gifts = yes
+	
+	# Modifiers:
+	modifier_overlord = {
+		modifier = princely_state_overlord
+	}
+	
+	modifier_subject = {
+		modifier = princely_state_subject
+	}
+	
+	# Opinion Modifiers:
+	overlord_opinion_modifier = lgModifiers_OpinionIsPrincelyState
+	subject_opinion_modifier = lgModifiers_OpinionIsPrincelyState
+}

@@ -1,0 +1,31 @@
+lgModifiers_BritishLuck = {
+	potential = {
+		OR = {
+			current_age = age_of_absolutism #Not before this
+			current_age = age_of_revolutions
+		}
+	}
+	
+	trigger = {
+		lgTriggers_british = yes
+	}
+	siege_blockade_progress = 1
+}
+
+lgModifiers_NoHeir = {
+	potential = {
+		NOT = {
+			has_country_flag = war_of_the_roses_ended
+		}
+		has_ruler_flag = henry_vi_lancaster
+	}
+
+	trigger = {
+		lgTriggers_british = yes
+		NOT = {
+			has_country_flag = war_of_the_roses_ended
+		}
+		has_ruler_flag = henry_vi_lancaster
+	}
+	heir_chance = -1
+}

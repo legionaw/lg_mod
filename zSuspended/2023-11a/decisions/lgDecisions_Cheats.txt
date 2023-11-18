@@ -1,0 +1,55 @@
+country_decisions = {
+	revenue3 = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = tax_hike }
+		}
+		allow = {
+			is_at_war = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = "tax_hike"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	missionary_reform = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = missionary_boost }
+		}
+		allow = {
+		
+		}
+		effect = {
+			add_country_modifier = {
+				name = missionary_boost
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	revoke_missionary_reform = {
+		potential = {
+			ai = no
+			has_country_modifier = missionary_boost
+		}
+		allow = {
+		
+		}
+		effect = {
+			remove_country_modifier = missionary_boost
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

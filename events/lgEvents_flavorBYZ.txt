@@ -1,0 +1,36 @@
+namespace = lgEventsBYZ
+
+########################
+# Theodosian Walls		 #
+########################
+
+# Theodosian Walls
+country_event = {
+	id = lgEventsBYZ.0001
+	title = "lgEventsBYZ.0001t"
+	desc = "lgEventsBYZ.0001d"
+	picture = FORT_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BYZ
+		owns = 151
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "lgEventsBYZ.0001a"
+		151 = {
+			add_province_modifier = {
+				name = theodosian_wall_reparations
+				duration = -1
+			}
+		}
+	}
+}

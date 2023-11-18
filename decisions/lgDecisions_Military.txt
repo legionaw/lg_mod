@@ -1,0 +1,192 @@
+country_decisions = {
+	manpower3 = { #Small Conscription
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = lgModifiers_conscripted0 }
+		}
+		allow = {
+			manpower_percentage = 0.75
+			NOT = {
+				manpower_percentage = 1
+			}
+		}
+		effect = {
+			add_yearly_manpower = 1
+			add_war_exhaustion = 0.125
+			add_mil_power = -25
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	manpower4 = { #Medium Conscription
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = lgModifiers_conscripted0 }
+		}
+		allow = {
+			manpower_percentage = 0.5
+			NOT = {
+				manpower_percentage = 0.75
+			}
+			is_at_war = yes
+		}
+		effect = {
+			add_yearly_manpower = 5
+			add_war_exhaustion = 0.25
+			add_mil_power = -50
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	manpower5 = { #Large Conscription
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = lgModifiers_conscripted0 }
+		}
+		allow = {
+			manpower_percentage = 0
+			NOT = {
+				manpower_percentage = 0.5
+			}
+			is_at_war = yes
+		}
+		effect = {
+			add_yearly_manpower = 10
+			add_war_exhaustion = 0.5
+			add_mil_power = -75
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	impress_sailors1 = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = lgModifiers_conscripted0 }
+		}
+		allow = {
+			sailors = 0
+			NOT = { sailors_percentage = 0.50 }
+		}
+		effect = {
+			add_yearly_sailors = 1
+			add_war_exhaustion = 0.125
+			add_mil_power = -25
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	division_mobilisationENG1 = {
+		potential = {
+			ai = no
+			lgTriggers_british = yes
+			is_at_war = yes
+		}
+		allow = {
+			is_at_war = yes
+			NOT = {
+				has_country_modifier = lgModifiers_blockerMobilized
+			}
+		}
+		effect = {
+			hidden_effect = {
+				add_country_modifier = {
+					name = "lgModifiers_blockerMobilized"
+					hidden = yes
+					duration = 1
+				}
+			}
+			add_mil_power = -100
+			if = {
+				limit = {
+					NOT = { mil_tech = 7 }
+				}
+				add_manpower = -48
+			}
+			if = {
+				limit = {
+					mil_tech = 7
+				}
+				add_manpower = -60
+			}
+			BritishArmy_divisions = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	division_mobilisationENG1a = {
+		potential = {
+			ai = no
+			lgTriggers_british = yes
+			is_at_war = yes
+		}
+		allow = {
+			is_at_war = yes
+			NOT = {
+				has_country_modifier = lgModifiers_blockerMobilized
+			}
+		}
+		effect = {
+			hidden_effect = {
+				add_country_modifier = {
+					name = "lgModifiers_blockerMobilized"
+					hidden = yes
+					duration = 1
+				}
+			}
+			BritishArmy_divisionsIreland = yes
+			BritishArmy_divisionsIreland = yes
+			BritishArmy_divisionsIreland = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	division_mobilisationENG2 = {
+		potential = {
+			ai = no
+			lgTriggers_british = yes
+			OR = {
+				bengal_region = { owned_by = ROOT }
+				hindusthan_region = { owned_by = ROOT }
+				west_india_region = { owned_by = ROOT }
+				deccan_region = { owned_by = ROOT }
+				coromandel_region = { owned_by = ROOT }
+				west_india_region = { owned_by = ROOT }
+				burma_region = { owned_by = ROOT }
+			}
+			is_at_war = yes
+		}
+		allow = {
+			is_at_war = yes
+			NOT = {
+				has_country_modifier = lgModifiers_blockerMobilized
+			}
+		}
+		effect = {
+			hidden_effect = {
+				add_country_modifier = {
+					name = "lgModifiers_blockerMobilized"
+					hidden = yes
+					duration = 1
+				}
+			}
+			BritishIndianArmy_division = yes
+			BritishIndianArmy_division = yes
+			BritishIndianArmy_division = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

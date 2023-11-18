@@ -1,0 +1,59 @@
+# Scottish Highlands Regiments (Great Britain, Absolutism + Revolution)
+merc_scottish_highlands = {
+	regiments_per_development = 0.03
+	home_province = 252
+	sprites = { dlc087_sco_sprite_pack dlc001_sco_sprite_pack sco_base_sprite_pack westerngfx_sprite_pack }
+	
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes 
+		tag = GBR
+		any_owned_province = { area = highlands_area }
+		custom_trigger_tooltip = {
+			tooltip = new_mercs_tt
+			has_global_flag = new_european_mercs
+		}
+	}
+	
+	modifier = {
+		fire_damage_received = -0.05
+		shock_damage = 0.05
+		discipline = 0.025
+		shock_damage_received = -0.05
+		#allow_mercenary_drill = yes
+	}
+}
+
+# Gurkha Regiments (England, Great Britain, or EIC if neighboring a country of Nepalese primary culture)
+merc_gurkha = {
+	regiments_per_development = 0.03
+	home_province = 2070
+	sprites = { dlc091_npl_sprite_pack indiangfx_sprite_pack }
+	
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes 
+		OR = {
+			tag = ENG
+			tag = GBR
+			tag = EIC
+		}
+		2070 = {
+			owner = {
+				primary_culture = nepali
+				is_neighbor_of = ROOT
+			}
+			culture = nepali
+		}
+#		any_neighbor_country = {
+#			primary_culture = nepali
+#			owns = 2070
+#		}
+	}
+	
+	modifier = {
+		fire_damage_received = -0.05
+		shock_damage = 0.05
+		discipline = 0.025
+		shock_damage_received = -0.05
+		#allow_mercenary_drill = yes
+	}
+}

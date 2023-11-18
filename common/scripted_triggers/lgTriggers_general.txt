@@ -1,0 +1,159 @@
+lgTriggers_british = {
+	OR = {
+		AND = {
+			tag = ENG
+			NOT = { 
+				exists = GBR
+			}
+		}
+		tag = GBR
+	}
+}
+
+lgTriggers_british_ireland = {
+	OR = {
+		AND = {
+			tag = ENG
+			NOT = { 
+				exists = GBR
+			}
+			NOT = {
+				IRE = {
+					exists = yes
+					is_subject_of = ENG
+				}
+			}
+		}
+		AND = {
+			tag = GBR
+			NOT = {
+				IRE = {
+					exists = yes
+					is_subject_of = GBR
+				}
+			}
+		}
+		AND = {
+			tag = IRE
+			OR = {
+				is_subject_of = ENG
+				is_subject_of = GBR
+			}
+		}
+	}
+}
+
+lgTriggers_ireland = {
+	OR = {
+		area = munster_area
+		area = connacht_area
+		area = leinster_area
+		area = ulster_area
+	}
+}
+
+lgTriggers_dutch = {
+	OR = {
+		AND = {
+			tag = HOL
+			NOT = { exists = NED }
+		}
+		tag = NED
+	}
+}
+
+lgTriggers_spain = {
+	OR = {
+		AND = {
+			tag = CAS
+			NOT = { exists = SPA }
+		}
+		tag = SPA
+	}
+}
+
+lgTriggers_german = {
+	OR = {
+		AND = {
+			tag = BRA
+			NOT = {
+				exists = PRU
+			}
+			NOT = {
+				PRU = {
+					has_country_flag = formed_prussia_flag
+				}
+			}
+		}
+		tag = PRU
+	}
+}
+
+lgTriggers_russia = {
+	OR = {
+		AND = {
+			tag = MOS
+			NOT = { exists = RUS }
+		}
+		tag = RUS
+	}
+}
+
+lgTriggers_italy = {
+	OR = {
+		AND = {
+			tag = SAV
+			NOT = { exists = SPI }
+			NOT = { exists = ITA }
+		}
+		AND = {
+			tag = SPI
+			NOT = { exists = ITA }
+		}
+		tag = ITA
+	}
+}
+
+lgTriggers_britishEIC = {
+	OR = {
+		AND = {
+			tag = ENG
+			NOT = {
+				exists = GBR
+			}
+		}
+		AND = {
+			tag = GBR
+			NOT = { 
+				exists = EIC
+			}
+		}
+		tag = EIC
+	}
+}
+
+lgTriggers_britishEIC2 = {
+	any_owned_province = {
+		superregion = india_superregion
+	}
+	OR = {
+		AND = {
+			is_subject = no
+			OR = {
+				AND = {
+					tag = ENG
+					NOT = {
+						exists = GBR
+					}
+				}
+				AND = {
+					tag = GBR
+					NOT = { 
+						exists = EIC
+					}
+				}
+			}
+		}
+		tag = EIC
+	}
+}

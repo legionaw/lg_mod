@@ -1,0 +1,27 @@
+lgEffects_ManchuRebels = {
+	every_owned_province = {
+		limit = {
+			culture = manchu
+			NOT = { controlled_by = REB }
+			NOT = { sieged_by = REB }
+		}
+		spawn_rebels = {
+			type = nationalist_rebels
+			size = 20
+			friend = MCH
+		}
+		add_province_modifier = {
+			name = suppress_minority
+			duration = 1825
+		}
+	}
+	every_owned_province = {
+		limit = {
+			culture = manchu
+			NOT = {
+				is_core = MCH
+			}
+		}
+		add_core = MCH
+	}
+}

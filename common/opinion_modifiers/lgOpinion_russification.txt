@@ -1,0 +1,4 @@
+attempted_russification = {
+	opinion = -200
+	years = 40
+}

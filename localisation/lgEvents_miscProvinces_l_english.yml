@@ -1,0 +1,44 @@
+﻿l_english:
+ lgEvents_miscProvinces.0001.t: "Halifax"
+ lgEvents_miscProvinces.0001.d: "The location of Halifax has made it an important naval base."
+ lgEvents_miscProvinces.0001.a: "Great!"
+ 
+ lgEvents_miscProvinces.0002.t: "Boston"
+ lgEvents_miscProvinces.0002.d: "The location of Boston has made it an important center of trade."
+ lgEvents_miscProvinces.0002.a: "Great!"
+ 
+ lgEvents_miscProvinces.0003.t: "Rise of Manhattan"
+ lgEvents_miscProvinces.0003.d: "The location of Manhattan has made it an important center of trade."
+ lgEvents_miscProvinces.0003.a: "Great!"
+ 
+ lgEvents_miscProvinces.0004.t: "Paducah"
+ lgEvents_miscProvinces.0004.d: "The location of Paducah has made it an important center of trade."
+ lgEvents_miscProvinces.0004.a: "Great!"
+ 
+ lgEvents_miscProvinces.0005.t: "Seattle"
+ lgEvents_miscProvinces.0005.d: "The location of Seattle has made it an important center of trade."
+ lgEvents_miscProvinces.0005.a: "Great!"
+ 
+ lgEvents_miscProvinces.0006.t: "Hawaii turns to sugar growing"
+ lgEvents_miscProvinces.0006.d: "Most of the agricultural estates in Hawaii has decided to switch to a valuable cash crop by growing sugarcanes instead."
+ lgEvents_miscProvinces.0006.a: "Excellent!"
+ 
+ lgEvents_miscProvinces.0007.t: "Philadelphia"
+ lgEvents_miscProvinces.0007.d: "In 1682, a new city called Philadelphia was founded at a point where Schuylkill River flowed into Delaware River. The city was subsequently incorporated in 1701. Its relative position at these rivers to the Atlantic Ocean has made the city an important center of trade, with its busy ports handling a large volume of cargos and the merchants generally flourishing."
+ lgEvents_miscProvinces.0007.a: "Excellent!"
+ 
+ lgEvents_miscProvinces.0008.t: "Louisville"
+ lgEvents_miscProvinces.0008.d: "In 1778, George Rogers Clark, a American militia officer famous for his exploits at Kaskaskia and Vincennes during the American Revolutionary War then ongoing that year, founded a new city called Louisville, named after French King Louis XVI whose assistance to the American cause were greatly appreciated, in the lands known as Kentucky. The city was subsequently incorporated in 1828 and has since prospered. Its relative position at the Ohio River has made the city an important center of trade, with the merchants generally flourishing."
+ lgEvents_miscProvinces.0008.a: "Excellent!"
+ 
+ lgEvents_miscProvinces.0009.t: "Los Angeles"
+ lgEvents_miscProvinces.0009.d: "In 1781, the Spanish founded a city in southern California Alta for which they named El Pueblo de Nuestra Señora la Reina de los Ángeles or literally "Town of Our Lady the Queen of the Angels", often shortened to the form of "Los Angeles". As a pueblo in the beginning, it had a modest growth, being granted a city status in 1835 and were incorporated as a city in 1850. The population of Los Angeles would not exceed 1,000 until 1830 and 10,000 in 1880. Since then, the city would experience dramatic population growth, exceeding 100,000 in 1900 and reached a million in 1930. Today, its population stood at 4 million and Los Angeles is second largest city in the United States, a status it gained in 1990, as well a major center of global trade."
+ lgEvents_miscProvinces.0009.a: "Excellent!"
+ 
+ lgEvents_miscProvinces.EVTNAME10602: "Continuing Growth of Manhattan as Centre of Trade"
+ lgEvents_miscProvinces.EVTDESC10602: "The continuing growth of Manhattan as a centre of trade has led to construction of a trade depot there."
+ lgEvents_miscProvinces.EVTOK10602: "Great!"
+ 
+ lgEvents_miscProvinces.EVTNAME10603: "New York Stock Exchange"
+ lgEvents_miscProvinces.EVTDESC10603: "On May 17, 1792 twenty four brokers signed the Buttonwood Agreement, which is commonly regarded as beginning of the famous New York Stock Exchange."
+ lgEvents_miscProvinces.EVTOK10603: "Buy low, sell high."

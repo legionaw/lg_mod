@@ -1,0 +1,27 @@
+wooden_wall2 = {
+	can_select = {
+		ai = no
+		lgTriggers_british = yes
+	}
+	
+	cost = 0.15
+	
+	country_modifier = {
+		own_coast_naval_combat_bonus = 2
+		naval_maintenance_modifier = -0.3
+		global_ship_trade_power = 0.66
+		capture_ship_chance = 0.66
+		heavy_ship_power = 0.5
+		light_ship_power = 0.75
+		movement_speed_in_fleet_modifier = 4
+		siege_blockade_progress = 1
+		blockade_efficiency = 0.25
+		max_flagships = 3
+	}
+	
+	effect = {}
+	
+	removed_effect = {}
+	
+	button_gfx = 5
+}

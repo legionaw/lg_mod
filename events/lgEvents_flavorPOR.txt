@@ -1,0 +1,100 @@
+namespace = POR_event
+
+# Macao
+country_event = {
+	id = POR_event.0001
+	title = "POR_event.0001t"
+	desc = "POR_event.0001d"
+	picture = SHIP_SAILING_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POR
+		num_of_ports = 1
+		any_owned_province = {
+			OR = {
+				superregion = india_superregion
+				superregion = china_superregion
+				superregion = east_indies_superregion
+				region = japan_region
+			}
+			has_port = yes
+		}
+		668 = {
+			has_discovered = POR
+			range = POR
+			owner = { ai = yes }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	
+	option = {		# Glorious!
+		name = "POR_event.0001a"
+		add_core = 668
+		if = {
+			limit = {
+				668 = { owner = { ai = yes } }
+			}
+			668 = { cede_province = POR }
+		}
+		add_prestige = 10
+	}
+}
+
+# Tensions due to competition in trade and colonies
+country_event = {
+	id = POR_event.0003
+	title = "POR_event.0003t"
+	desc = "POR_event.0003d"
+	picture = COURT_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_country_flag = iberian_tensions2 }
+		is_year = 1444
+		NOT = { is_year = 1800 }
+		tag = POR
+		government = monarchy
+		any_known_country = {
+			tag = SPA
+			ai = yes
+			is_subject = no
+			num_of_cities = 4
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 0.5
+			SPA = {
+				any_owned_province = {
+					is_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		set_country_flag = iberian_tensions2
+	}
+	
+	option = {
+		name = "POR_event.0003a"
+		add_opinion = { who = SPA modifier = iberian_competition }
+		SPA = {
+			add_opinion = { who = ROOT modifier = iberian_competition }
+		}
+	}
+}

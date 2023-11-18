@@ -1,0 +1,27 @@
+﻿l_english:
+ lgEvents_flavorENG.0001.t: "The Hecate Strait Purchase"
+ lgEvents_flavorENG.0001.d: "Portugal is hard pressed for cash as it was set on a dream of worldwide hegemony. They therefore offered the territory surrounding Hecate Strait, of a strategic interest for our colony of Columbia, against a lump sum of 15 million dollars. The $MONARCHTITLE$ and the court agreed. Your Majesty, you would only get the province that Portugal presently owns for a lump sum of 1000 ducats. How will you choose, my $MONARCHTITLE$?"
+ lgEvents_flavorENG.0001.a: "Accept Offer"
+ lgEvents_flavorENG.0001.b: "Decline Offer"
+ 
+ custom_event.EVTNAME0001: "The New Monarchy"
+ custom_event.EVTDESC0001: "Our monarchy has undergone a fundamental change over a last decade in its character that it is no longer the medieval one we were familiar with."
+ 
+ custom_event.EVTNAME0002: "Unions of the Crowns"
+ custom_event.EVTDESC0002: "The monarch of Scotland now formally takes the throne of England. This begins what we call Union of the Crowns, with important implications for British Isles."
+ 
+ custom_event.EVTNAME0003: "Rise of the Tudors"
+ custom_event.EVTDESC0003: "Following the Wars of the Rose, a new and powerful dynasty called Tudor has come to power and has brought the newfound stability to the kingdom of England."
+ 
+ ENG_event.EVTNAME2020101: "English Restoration"
+ ENG_event.EVTDESC2020101: "Ever since death of Oliver Cromwell, the Commonwealth of England has fell into turmoil and now there is a general desire within the country for return of the monarchy. The recognized heir of a Scottish royal lineage declared that he would be willing to take the royal throne under certain conditions set out by the Parliament, to which the English Parliament agreed."
+ 
+ ENG_event.EVTNAME2020102: "Personal Union of Great Britain and Hannover"
+ ENG_event.EVTDESC2020102: "Through a royal marriage, the kingdoms of Great Britain and Hannover are now in personal union."
+ 
+ anglo_portuguese.EVTNAME0007: "Reconfirming the Treaty of Windsor"
+ anglo_portuguese.EVTDESC0007: "The Treaty of Windsor, signed in 1386 between kingdoms of England and Portugal, has been quite enduring for a treaty those days. It has provided quite substantial mutual benefits for both kingdoms, in both military and economic terms. Today, we are here to reconfirm this bond of friendship between our Kingdom of England and the Kingdom of Portugal."
+ anglo_portuguese.EVTOK0007: "May England and Portugal be friends forever!"
+ 
+ royal_marriage.0019t: "Royal Marriage with Scotland"
+ royal_marriage.0019d: "The kingdoms of England and Scotland has agreed to a treaty which provided for a marriage between houses of England and Scotland. This will have dynastic implications for England."

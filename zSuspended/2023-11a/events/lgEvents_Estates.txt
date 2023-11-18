@@ -1,0 +1,191 @@
+########################################
+# Estates
+########################################
+
+namespace = lgEvents_estates
+
+# Estate Privilege Event
+country_event = {
+	id = lgEvents_estates.001
+	title = "lgEvents_estates.001t"
+	desc = "lgEvents_estates.001d"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {			# OK
+		name = "lgEvents_Options.OK"
+		remove_estate_privilege = lgEstates_InteractionMoney1
+		remove_estate_privilege = lgEstates_InteractionMoney2
+		remove_estate_privilege = lgEstates_InteractionADM1
+		remove_estate_privilege = lgEstates_InteractionDIP1
+		remove_estate_privilege = lgEstates_InteractionMIL1
+		remove_estate_privilege = lgEstates_InteractionBURLOY
+		remove_estate_privilege = lgEstates_InteractionCHRLOY
+		remove_estate_privilege = lgEstates_InteractionNOBLOY
+		remove_estate_privilege = lgEstates_InteractionBURINF
+		remove_estate_privilege = lgEstates_InteractionCHRINF
+		remove_estate_privilege = lgEstates_InteractionNOBINF
+		remove_estate_privilege = lgEstates_InteractionReligion1
+		#remove_estate_privilege = lgEstates_InteractionArmy1
+		#remove_estate_privilege = lgEstates_InteractionArmy1b
+		#remove_estate_privilege = lgEstates_InteractionIndianArmy1
+		#remove_estate_privilege = lgEstates_InteractionIndianArmy1b
+		remove_estate_privilege = lgEstates_InteractionIndianArmy2
+		#remove_estate_privilege = lgEstates_InteractionNavy1
+		#remove_estate_privilege = lgEstates_InteractionNavy1b
+		#remove_estate_privilege = lgEstates_InteractionEconomy1
+		#remove_estate_privilege = lgEstates_InteractionEconomy1b
+		#remove_estate_privilege = lgEstates_InteractionAdministration1
+		#remove_estate_privilege = lgEstates_InteractionAdministration1b
+		#remove_estate_privilege = lgEstates_InteractionDiplomacy1
+		#remove_estate_privilege = lgEstates_InteractionDiplomacy1b
+		remove_estate_privilege = lgEstates_Privileges1
+	}
+}
+
+# Repeal of the Army Act
+country_event = {
+	id = lgEvents_estates.002
+	title = "lgEvents_estates.002t"
+	desc = "lgEvents_estates.002d"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {			# OK
+		name = "lgEvents_Options.OK"
+		remove_estate_privilege = lgEstates_InteractionArmy1b
+	}
+}
+
+# Repeal of the Indian Army Act
+country_event = {
+	id = lgEvents_estates.003
+	title = "lgEvents_estates.003t"
+	desc = "lgEvents_estates.003d"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {			# OK
+		name = "lgEvents_Options.OK"
+		remove_estate_privilege = lgEstates_InteractionIndianArmy1b
+	}
+}
+
+# Repeal of the Navy Act
+country_event = {
+	id = lgEvents_estates.004
+	title = "lgEvents_estates.004t"
+	desc = "lgEvents_estates.004d"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {			# OK
+		name = "lgEvents_Options.OK"
+		remove_estate_privilege = lgEstates_InteractionNavy1b
+	}
+}
+
+# Repeal of the Economy Act
+country_event = {
+	id = lgEvents_estates.005
+	title = "lgEvents_estates.005t"
+	desc = "lgEvents_estates.005d"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {			# OK
+		name = "lgEvents_Options.OK"
+		remove_estate_privilege = lgEstates_InteractionEconomy1b
+	}
+}
+
+# Repeal of the Administration Act
+country_event = {
+	id = lgEvents_estates.006
+	title = "lgEvents_estates.006t"
+	desc = "lgEvents_estates.006d"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {			# OK
+		name = "lgEvents_Options.OK"
+		remove_estate_privilege = lgEstates_InteractionAdministration1b
+	}
+}
+
+# Repeal of the Diplomacy Act
+country_event = {
+	id = lgEvents_estates.007
+	title = "lgEvents_estates.007t"
+	desc = "lgEvents_estates.007d"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {			# OK
+		name = "lgEvents_Options.OK"
+		remove_estate_privilege = lgEstates_InteractionDiplomacy1b
+	}
+}

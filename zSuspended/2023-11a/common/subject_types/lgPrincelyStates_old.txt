@@ -1,0 +1,75 @@
+lgSubjectTypes_PrincelyStates = {
+	copy_from = vassal
+	
+	#### TRIGGERS ####
+	is_potential_overlord = {
+		OR = {
+			AND = {
+				tag = ENG
+				NOT = { 
+					exists = GBR
+				}
+			}
+			tag = GBR
+		}
+	}
+	
+	# Graphics:
+	sprite = GFX_icon_march
+	diplomacy_overlord_sprite = GFX_diplomacy_leadmarch
+	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
+	
+	# Properties:
+	overlord_can_attack = no
+	overlord_can_be_subject = yes
+	takes_diplo_slot = no
+	transfer_trade_power = yes
+	can_have_great_projects_moved_by_overlord = yes
+	overlord_protects_external = yes
+	pays_overlord = 0.0
+	military_focus = 1.5
+	base_liberty_desire = -15.0
+	can_be_annexed = yes
+	can_have_subjects_of_other_types = yes
+	
+	opinion_on_subject_integration = 0
+	liberty_desire_development_ratio = 0.05
+	
+	max_government_rank = 2
+	
+	relative_power_class = 2
+	should_quit_wars_on_activation = yes
+	
+	# Subject Interactions:
+	# (continuous)
+	subsidize_armies = yes
+	send_officers = yes
+	# (immediate)
+	fortify_march = yes
+	send_additional_troops = yes
+	return_land = yes
+	bestow_gifts = yes
+	
+	# Modifiers:
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_overlord = {
+		modifier = princely_states_subject
+	}
+	modifier_subject = {
+		modifier = princely_states_bonus
+#		trigger = {
+#			NOT = {
+#				development_of_overlord_fraction = 0.25
+#			}
+#		}
+#		expiration_message_overlord = MARCHTOOLARGE
+#		expiration_message_subject = MARCHTOOLARGEUS
+	
+	overlord_opinion_modifier = lgModifiers_OpinionIsPrincelyState
+	subject_opinion_modifier = lgModifiers_OpinionIsPrincelyState
+	}
+}

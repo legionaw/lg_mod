@@ -1,0 +1,9 @@
+﻿l_english:
+ lgEvents_CapitalChange.0001t: "Rio de Janiero as the new Capital?"
+ lgEvents_CapitalChange.0001d: "Rio de Janiero has grew dramatically that has increasingly made it an attractive location to relocate our capital to. The proposal is now laid before the [Root.Monarch.GetTitle]'s Council."
+ lgEvents_CapitalChange.0001.a: "Approve."
+ lgEvents_CapitalChange.0001.b: "Disapprove."
+ lgEvents_CapitalChange.0002t: "Kingston as the new Capital?"
+ lgEvents_CapitalChange.0002d: "Kingston has grew dramatically that has increasingly made it an attractive location to relocate our capital to. The proposal is now laid before the [Root.Monarch.GetTitle]'s Council."
+ lgEvents_CapitalChange.0002.a: "Approve."
+ lgEvents_CapitalChange.0002.b: "Disapprove."

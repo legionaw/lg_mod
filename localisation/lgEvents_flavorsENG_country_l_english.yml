@@ -1,0 +1,32 @@
+﻿l_english:
+ lgEventsENG.0001t: "Colonization"
+ lgEventsENG.0001d: "The age of colonization has arrived. A group of men has come before you requesting a charter for their company to begin colonizing lands far beyond Europe."
+ lgEventsENG.0001a: "Yes, we could use more wealth and lands. Let's do it!"
+ lgEventsENG.0001b: "No, I think this is a foolish venture."
+
+ lgEventsENG.0002t: "Repeal of the Pitt's Income Tax."
+ lgEventsENG.0002d: "With $COUNTRY$ being no longer at war, the Parliament has repealed the Pitt's income tax scheme."
+ lgEventsENG.0002a: "Very well."
+
+ lgEventsENG.2001t: "Protestantism appears in England"
+ lgEventsENG.2001d: "The heretical faith which we called Protestantism have been appearing in our country lately and is achieving a popularity."
+ lgEventsENG.2001.a: "Damnation!"
+
+ lgEventsENG.0004t: "Jewish Declaration"
+ lgEventsENG.0004d: "Our Foreign Secretary has issued a declaration providing for a Jewish national home."
+ lgEventsENG.0004a: "Make it so."
+ lgEventsENG.0004b: "No, that would be violation of my coronation oath. Forget it!"
+ 
+ lgEventsENG.0005t: "The Rise of a Dynasty" 
+ lgEventsENG.0005d: "We must now decide how to proceed, to strengthen our position at home and abroad. Even now there are whispers of potential usurpers, including the return from exile of the ambitious Henry Tudor. It might be prudent therefore to reconcile our two houses in matrimony."
+ lgEventsENG.0005a: "There will never be reconciliation between our two dynasties!" 
+ lgEventsENG.0005b: "It is time for peace, let us join our two houses together in marriage."
+ 
+ lgEventsENG.0006t: "The Entrenchment of Catholicism in Ireland" 
+ lgEventsENG.0006d: "The Catholicism, of which the [Root.GetAdjective] government has had suspicons, has been heavily entrenched in Ireland and we are finding it impossible to convert them to our righteous Protestant religion."
+ lgEventsENG.0006.a: "Horrible!"
+ 
+ lgEventsENG.0007t: "Modernizing Diplomacy"
+ lgEventsENG.0007d: "With increasing demands placed upon our diplomatic service by a growing interactions with foreign states, a proposal has been made by one of our Secretaries of State that we appoint additional diplomats to help with these workload."
+ lgEventsENG.0007a: "I think that is excellent idea. Let's do it!"
+ lgEventsENG.0007b: "No, we should work more with less."

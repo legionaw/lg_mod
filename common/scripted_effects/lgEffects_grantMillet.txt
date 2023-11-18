@@ -1,0 +1,24 @@
+lgEffects_grantMillet = {
+	every_owned_province = {
+		limit = {
+			is_capital = no
+			OR = {
+				religion = orthodox
+				religion = catholic
+			}
+			OR = {
+				continent = europe
+				culture = georgian
+				culture = armenian
+			}
+			NOT = { has_province_modifier = lgModifiers_millet }
+			NOT = { culture = turkish }
+			NOT = { culture = albanian }
+			NOT = { culture = pontic_greek }
+		}
+		add_province_modifier = {
+			name = "lgModifiers_millet"
+			duration = -1
+		}
+	}
+}

@@ -1,0 +1,8 @@
+﻿l_english:
+ custom_event.EVTOPTOK: "OK."
+ custom_event.EVTOPTAYE: "I approve."
+ custom_event.EVTOPTNAY: "NO."
+ EVTOPT_EXCELLENT: "Excellent!"
+ 
+ lg_event.EVTOPTOK: "OK."
+ lgEvents_Options.OK: "OK."

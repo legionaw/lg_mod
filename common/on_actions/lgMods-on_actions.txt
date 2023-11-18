@@ -1,0 +1,16 @@
+# OBS: Consider that the following on_actions can be called for Personal Union juniors as well.
+# country
+on_new_monarch = {
+	if = {
+		limit = {
+			OR = {
+				has_ruler_flag = lgFlags_tudor
+				has_ruler_flag = lgFlags_Isabella
+				has_ruler_flag = lgFlags_hab_ladislaus_postumus_heir
+				has_ruler_flag = lgFlags_hun_ladislaus_postumus_heir
+			}
+			ruler_has_personality = immortal_personality
+		}
+		remove_ruler_personality = immortal_personality
+	}
+}

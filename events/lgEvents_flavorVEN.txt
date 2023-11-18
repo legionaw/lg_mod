@@ -1,0 +1,37 @@
+namespace = lgEvents_flavorVEN
+
+# The Restoration
+country_event = {
+	id = lgEvents_flavorVEN.0001
+	title = "lgEvents_flavorVEN.0001.t"
+	desc = "lgEvents_flavorVEN.0001.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_ven_restoration
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_ven_restoration }
+		NOT = { has_reform = venice_merchants_reform }
+		tag = VEN
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorVEN.0001.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		lose_reforms = 6
+		change_government = republic
+		add_government_reform = venice_merchants_reform
+	}
+	
+	option = {
+		name = "lgEvents_flavorVEN.0001.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+}

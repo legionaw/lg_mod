@@ -1,0 +1,393 @@
+##################################################
+##	SUBSIDIES																		##
+##################################################
+
+#	SUBSIDY (LEVEL I)
+##	GRANT
+lgDiplomacy_Subsidy = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = {
+			ai = yes
+			NOT = {
+				has_country_modifier = lgModifiers_Subsidy
+			}
+		}
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+	}
+	
+	on_accept = {
+		FROM = {
+			add_country_modifier = {
+				name = lgModifiers_Subsidy
+				duration = -1
+			}
+		}
+		FROM = {
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = { 
+							who = ROOT
+							modifier = lgModifiers_OpinionSubsidy
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSubsidy
+				}
+				add_trust = {
+					who = ROOT
+					value = 5
+					mutual = yes
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+##	REVOKE
+lgDiplomacy_RevokeSubsidy = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = {
+			ai = yes
+			has_country_modifier = lgModifiers_Subsidy
+		}
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+	}
+	
+	on_accept = {
+		FROM = {
+			remove_country_modifier = lgModifiers_Subsidy
+		}
+		FROM = {
+			if = {
+				limit = {
+					has_opinion_modifier = { 
+						who = ROOT
+						modifier = lgModifiers_OpinionSubsidy
+					}
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSubsidy
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+# SUBSIDY (LEVEL II)
+## GRANT
+lgDiplomacy_Subsidy2 = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = {
+			ai = yes
+			has_country_modifier = lgModifiers_Subsidy
+			NOT = {
+				has_country_modifier = lgModifiers_Subsidy2
+			}
+		}
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+	}
+	
+	on_accept = {
+		FROM = {
+			add_country_modifier = {
+				name = lgModifiers_Subsidy2
+				duration = -1
+			}
+		}
+		FROM = {
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = { 
+							who = ROOT
+							modifier = lgModifiers_OpinionSubsidy2
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSubsidy2
+				}
+				add_trust = {
+					who = ROOT
+					value = 5
+					mutual = yes
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+##	REVOKE
+lgDiplomacy_RevokeSubsidy2 = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = {
+			ai = yes
+			has_country_modifier = lgModifiers_Subsidy2
+		}
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+	}
+	
+	on_accept = {
+		FROM = {
+			remove_country_modifier = lgModifiers_Subsidy2
+		}
+		FROM = {
+			if = {
+				limit = {
+					has_opinion_modifier = { 
+						who = ROOT
+						modifier = lgModifiers_OpinionSubsidy2
+					}
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSubsidy2
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+# Subsidy (Level III)
+## GRANT
+lgDiplomacy_Subsidy3 = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = {
+			ai = yes
+			has_country_modifier = lgModifiers_Subsidy2
+			NOT = {
+				has_country_modifier = lgModifiers_Subsidy3
+			}
+		}
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+	}
+	
+	on_accept = {
+		FROM = {
+			add_country_modifier = {
+				name = lgModifiers_Subsidy3
+				duration = -1
+			}
+		}
+		FROM = {
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = { 
+							who = ROOT
+							modifier = lgModifiers_OpinionSubsidy3
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSubsidy3
+				}
+				add_trust = {
+					who = ROOT
+					value = 5
+					mutual = yes
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+##	REVOKE
+lgDiplomacy_Subsidy3revoke = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = {
+			ai = yes
+			has_country_modifier = lgModifiers_Subsidy3
+		}
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+	}
+	
+	on_accept = {
+		FROM = {
+			remove_country_modifier = lgModifiers_Subsidy3
+		}
+		FROM = {
+			if = {
+				limit = {
+					has_opinion_modifier = { 
+						who = ROOT
+						modifier = lgModifiers_OpinionSubsidy3
+					}
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSubsidy3
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+# Subsidy (Level IV (Defensive))
+## GRANT
+lgDiplomacy_Subsidy4 = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = {
+			ai = yes
+			NOT = {
+				has_country_modifier = lgModifiers_Subsidy4
+			}
+		}
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+	}
+	
+	on_accept = {
+		FROM = {
+			add_country_modifier = {
+				name = lgModifiers_Subsidy4
+				duration = -1
+			}
+		}
+		FROM = {
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = { 
+							who = ROOT
+							modifier = lgModifiers_OpinionSubsidy4
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSubsidy4
+				}
+				add_trust = {
+					who = ROOT
+					value = 5
+					mutual = yes
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+##	REVOKE
+lgDiplomacy_Subsidy4revoke = {
+	category = economy
+	
+	alert_index = 11
+	alert_tooltip = send_state_aid_alert_tooltip
+	
+	is_visible = {
+		#FROM = { alliance_with = ROOT }
+		FROM = {
+			ai = yes
+			has_country_modifier = lgModifiers_Subsidy4
+		}
+	}
+	is_allowed = {
+		ROOT = { ai = no }
+	}
+	
+	on_accept = {
+		FROM = {
+			remove_country_modifier = lgModifiers_Subsidy4
+		}
+		FROM = {
+			if = {
+				limit = {
+					has_opinion_modifier = { 
+						who = ROOT
+						modifier = lgModifiers_OpinionSubsidy4
+					}
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = lgModifiers_OpinionSubsidy4
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}

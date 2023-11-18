@@ -1,0 +1,671 @@
+	interaction = {
+		key = lgEstates_InteractionMoney1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		hidden_trigger = {
+			ai = no
+		}
+		effect = {
+			add_treasury = 50000
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionMoney2
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		hidden_trigger = {
+			ai = no
+		}
+		effect = {
+			add_treasury = 25000
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+#####
+
+	interaction = {
+		key = lgEstates_InteractionADM1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					adm_power = 249
+				}
+				add_adm_power = 750
+			}
+			if = {
+				limit = {
+					#adm_power = -999
+					NOT = {
+						adm_power = 249
+					}
+				}
+				add_adm_power = 750
+			}
+			#add_dip_power = 750
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	interaction = {
+		key = lgEstates_InteractionDIP1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					dip_power = 249
+				}
+				add_dip_power = 750
+			}
+			if = {
+				limit = {
+					#dip_power = -999
+					NOT = {
+						dip_power = 249
+					}
+				}
+				add_dip_power = 750
+			}
+			#add_dip_power = 750
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	interaction = {
+		key = lgEstates_InteractionMIL1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					mil_power = 249
+				}
+				add_mil_power = 750
+			}
+			if = {
+				limit = {
+					#mil_power = -999
+					NOT = {
+						mil_power = 249
+					}
+				}
+				add_mil_power = 750
+			}
+			#add_mil_power = 750
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionBURLOY
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_estate = estate_burghers
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 10
+			}
+			add_treasury = -1000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionCHRLOY
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_estate = estate_church
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_treasury = -1000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionNOBLOY
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_estate = estate_nobles
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+			add_treasury = -1000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionBURINF
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_estate = estate_burghers
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_estate_influence_modifier = {
+				estate = estate_burghers
+				desc = lgEstate_ModifiersSuppressed
+				influence = -10
+				duration = 7300
+			}
+			add_mil_power = -250
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionCHRINF
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_estate = estate_church
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = lgEstate_ModifiersSuppressed
+				influence = -10
+				duration = 7300
+			}
+			add_mil_power = -250
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionNOBINF
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_estate = estate_nobles
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_estate_influence_modifier = {
+				estate = estate_nobles
+				desc = lgEstate_ModifiersSuppressed
+				influence = -10
+				duration = 7300
+			}
+			add_mil_power = -250
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionReligion1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			religion = catholic
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_papal_influence = 100
+			add_treasury = -1000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+#### NEW AS OF AUGUST 12TH 2018 ####
+	interaction = {
+		key = lgEstates_InteractionArmy1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			NOT = { has_country_modifier = lgModifiers_ArmyAct }
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_ArmyAct
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionArmy1b
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_country_modifier = lgModifiers_ArmyAct
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			remove_country_modifier = lgModifiers_ArmyAct
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionIndianArmy1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			NOT = { has_country_modifier = lgModifiers_CompanyArmy }
+			any_owned_province = {
+				OR = {
+					superregion = india_superregion
+					superregion = china_superregion
+					superregion = east_indies_superregion
+					region = japan_region
+				}
+				has_port = yes
+			}
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_CompanyArmy
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionIndianArmy1b
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_country_modifier = lgModifiers_CompanyArmy
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			remove_country_modifier = lgModifiers_CompanyArmy
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionIndianArmy2
+		random_seed = crown_land_share
+		
+		cooldown_months = 5
+		
+		trigger = {
+			any_owned_province = {
+				OR = {
+					superregion = india_superregion
+					superregion = china_superregion
+					superregion = east_indies_superregion
+					region = japan_region
+				}
+				has_port = yes
+			}
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			BritishIndianArmy_division2 = yes
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionNavy1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			NOT = { has_country_modifier = lgModifiers_NavalAct }
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_NavalAct
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionNavy1b
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_country_modifier = lgModifiers_NavalAct
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			remove_country_modifier = lgModifiers_NavalAct
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	interaction = {
+		key = lgEstates_InteractionEconomy1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			NOT = { has_country_modifier = lgModifiers_EconomyAct }
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_EconomyAct
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionEconomy1b
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_country_modifier = lgModifiers_EconomyAct
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			remove_country_modifier = lgModifiers_EconomyAct
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionAdministration1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			NOT = { has_country_modifier = lgModifiers_AdministrationAct }
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_AdministrationAct
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionAdministration1b
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_country_modifier = lgModifiers_AdministrationAct
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			remove_country_modifier = lgModifiers_AdministrationAct
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionDiplomacy1
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			NOT = { has_country_modifier = lgModifiers_DiplomacyAct }
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = lgModifiers_DiplomacyAct
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		key = lgEstates_InteractionDiplomacy1b
+		random_seed = crown_land_share
+		
+		cooldown_months = 0
+		
+		trigger = {
+			has_country_modifier = lgModifiers_DiplomacyAct
+		}
+		
+		hidden_trigger = {
+			ai = no
+		}
+		
+		effect = {
+			remove_country_modifier = lgModifiers_DiplomacyAct
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}

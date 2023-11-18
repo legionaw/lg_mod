@@ -1,0 +1,23 @@
+country_decisions = {
+	ENG_revenue1 = {
+		potential = {
+			ai = no
+			lgTriggers_british = yes
+			is_year = 1798
+			NOT = { has_country_modifier = lgModifiers_ENGtax }
+			is_at_war = yes
+		}
+		allow = {
+			is_at_war = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = "lgModifiers_ENGtax"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

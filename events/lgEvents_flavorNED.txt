@@ -1,0 +1,157 @@
+namespace = lgEvents_flavorNED
+
+# The St. Martin Purchase
+country_event = {
+	id = lgEvents_flavorNED.0001
+	title = "lgEvents_flavorNED.0001.t"
+	desc = "lgEvents_flavorNED.0001.d"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_st_thomas01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_st_thomas01 }
+		SPA = {
+			ai = yes
+		}
+		tag = NED
+		1881 = {
+			OR = {
+				owned_by = SPA
+				owner = {
+					is_colonial_nation_of = SPA
+				}
+			}
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorNED.0001.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		add_opinion = { 
+			who = SPA
+			modifier = opinion_st_martin
+			years = 50
+		}
+		1881 = {
+			if = {
+				limit = {
+					OR = {
+						owned_by = SPA
+						owner = {
+							is_colonial_nation_of = SPA
+						}
+					}
+				}
+				remove_core = PREV
+				add_core = ROOT
+				cede_province = ROOT
+			}
+			if = {
+				limit = {
+					culture = castillian
+				}
+				change_culture = dutch
+			}
+		}
+		SPA = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorNED.0001.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		add_opinion = { 
+			who = SPA
+			modifier = opinion_disappointed
+			years = 20
+		}
+	}
+}
+
+# The Curacao Purchase
+country_event = {
+	id = lgEvents_flavorNED.0002
+	title = "lgEvents_flavorNED.0002.t"
+	desc = "lgEvents_flavorNED.0002.d"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_curacao01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_curacao01 }
+		FRA = {
+			ai = yes
+		}
+		tag = NED
+		491 = {
+			OR = {
+				owned_by = FRA
+				owner = {
+					is_colonial_nation_of = FRA
+				}
+			}
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorNED.0002.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		add_opinion = { 
+			who = FRA
+			modifier = opinion_curacao
+			years = 50
+		}
+		491 = {
+			if = {
+				limit = {
+					OR = {
+						owned_by = FRA
+						owner = {
+							is_colonial_nation_of = FRA
+						}
+					}
+				}
+				remove_core = PREV
+				add_core = ROOT
+				cede_province = ROOT
+			}
+			if = {
+				limit = {
+					culture = cosmopolitan_french
+				}
+				change_culture = dutch
+			}
+		}
+		FRA = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorNED.0002.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		add_opinion = { 
+			who = FRA
+			modifier = opinion_disappointed
+			years = 20
+		}
+	}
+}

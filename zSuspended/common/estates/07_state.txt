@@ -1,0 +1,785 @@
+lgEstate_state = {
+	icon = 3
+	color = { 150 150 150 }
+	keep_on_conquest = no		# Is estate kept in control of province on conquest?
+	min_provinces_to_want_territory = 0
+	
+	wanted_territory_modifier = {
+		desc = EST_VAL_STATE
+		trigger = {
+			always = yes
+		}
+		value = 0
+	}
+
+	# If true, country will get estate
+	trigger = {
+		ai = no
+	}
+	
+	# If true, province can be granted to estate
+	province_trigger = {
+	}
+	
+	# Min autonomy in estate provinces
+	min_autonomy = 0
+	
+	# Estate cancels out the following multiplicative local autonomy effects:
+	autonomy_does_not_affect = local_production_efficiency
+	autonomy_does_not_affect = province_trade_power_modifier
+	autonomy_does_not_affect = naval_forcelimit_modifier
+	autonomy_does_not_affect = local_sailors_modifier
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		#trade_efficiency = 0.2
+		#development_cost = -0.1
+	}
+	country_modifier_neutral = {
+		#trade_efficiency = 0.2
+	}	
+	country_modifier_angry = {
+		#trade_efficiency = -0.1
+		#development_cost = 0.1
+	}
+	
+	# These do not scale, but only applied in provinces owned by the estate
+	province_modifier_happy = {
+		#trade_goods_size_modifier = 0.1
+		#province_trade_power_modifier = 0.5
+	}
+	province_modifier_neutral = {
+		#province_trade_power_modifier = 0.5
+	}
+	province_modifier_angry = {
+		#local_unrest = 5
+	}
+	
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {
+		desc = EST_HIGH_DEVELOPMENT_PROVINCE
+		trigger = {
+			any_owned_province = {
+				development = 30
+			}
+		}
+		influence = 5
+	}
+	
+	loyalty_modifier = {
+		desc = EST_VAL_STATE
+		trigger = {
+			always = yes
+		}
+		loyalty = 10
+	}
+	
+	# For province assignment
+	ai_grant_province = {
+		factor = 0
+	}
+	
+	# Does the AI want to give any extra territory beyond the minimum?
+	ai_territory_modifier = {
+		trigger = {
+			government = monarchy
+			technology_group = western
+			num_of_cities = 10
+		}
+		value = 10
+	}
+	ai_territory_modifier = {
+		trigger = {
+			has_idea_group = trade_ideas
+			num_of_cities = 10
+		}
+		value = 5
+	}
+	ai_territory_modifier = {
+		trigger = {
+			has_idea_group = plutocracy_ideas
+			num_of_cities = 10
+		}
+		value = 5
+	}
+
+	# Special interactions
+	interaction = {
+		name = "lgEstates_InteractionMoney1"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_treasury = 50000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	interaction = {
+		name = "lgEstates_InteractionMoney2"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_treasury = 25000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	interaction = {
+		name = "lgEstates_InteractionADM1"
+		icon = 3
+		
+		years_between_use = 0
+		
+		potential = {
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					adm_power = 249
+				}
+				add_adm_power = 750
+			}
+			if = {
+				limit = {
+					#adm_power = -999
+					NOT = {
+						adm_power = 249
+					}
+				}
+				add_adm_power = 750
+			}
+			#add_dip_power = 750
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	interaction = {
+		name = "lgEstates_InteractionDIP1"
+		icon = 3
+		
+		years_between_use = 0
+		
+		potential = {
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					dip_power = 249
+				}
+				add_dip_power = 750
+			}
+			if = {
+				limit = {
+					#dip_power = -999
+					NOT = {
+						dip_power = 249
+					}
+				}
+				add_dip_power = 750
+			}
+			#add_dip_power = 750
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	interaction = {
+		name = "lgEstates_InteractionMIL1"
+		icon = 3
+		
+		years_between_use = 0
+		
+		potential = {
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					mil_power = 249
+				}
+				add_mil_power = 750
+			}
+			if = {
+				limit = {
+					#mil_power = -999
+					NOT = {
+						mil_power = 249
+					}
+				}
+				add_mil_power = 750
+			}
+			#add_mil_power = 750
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionBURLOY"
+		icon = 3
+		
+		years_between_use = 0
+		
+		potential = {
+			has_estate = estate_burghers
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 10
+			}
+			add_treasury = -1000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionCHRLOY"
+		icon = 3
+		
+		years_between_use = 0
+		
+		potential = {
+			has_estate = estate_church
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_treasury = -1000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionNOBLOY"
+		icon = 3
+		
+		years_between_use = 0
+		
+		potential = {
+			has_estate = estate_nobles
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+			add_treasury = -1000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionBURINF"
+		icon = 3
+		
+		years_between_use = 0
+		
+		potential = {
+			has_estate = estate_burghers
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_estate_influence_modifier = {
+				estate = estate_burghers
+				desc = lgEstate_ModifiersSuppressed
+				influence = -10
+				duration = 7300
+			}
+			add_mil_power = -250
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionCHRINF"
+		icon = 3
+		
+		years_between_use = 0
+		
+		potential = {
+			has_estate = estate_church
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = lgEstate_ModifiersSuppressed
+				influence = -10
+				duration = 7300
+			}
+			add_mil_power = -250
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionNOBINF"
+		icon = 3
+		
+		years_between_use = 0
+		
+		potential = {
+			has_estate = estate_nobles
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_estate_influence_modifier = {
+				estate = estate_nobles
+				desc = lgEstate_ModifiersSuppressed
+				influence = -10
+				duration = 7300
+			}
+			add_mil_power = -250
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionReligion1"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			religion = catholic
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_papal_influence = 100
+			add_treasury = -1000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+#### NEW AS OF AUGUST 12TH 2018 ####
+	interaction = {
+		name = "lgEstates_InteractionArmy1"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			NOT = { has_country_modifier = lgModifiers_ArmyAct }
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "lgModifiers_ArmyAct"
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionArmy1b"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			has_country_modifier = lgModifiers_ArmyAct
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			remove_country_modifier = "lgModifiers_ArmyAct"
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionIndianArmy1"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			NOT = { has_country_modifier = lgModifiers_CompanyArmy }
+			any_owned_province = {
+				OR = {
+					superregion = india_superregion
+					superregion = china_superregion
+					superregion = east_indies_superregion
+					region = japan_region
+				}
+				has_port = yes
+			}
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "lgModifiers_CompanyArmy"
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionIndianArmy1b"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			has_country_modifier = lgModifiers_CompanyArmy
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			remove_country_modifier = "lgModifiers_CompanyArmy"
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionIndianArmy2"
+		icon = 6
+		
+		years_between_use = 5
+		
+		potential = {
+			any_owned_province = {
+				OR = {
+					superregion = india_superregion
+					superregion = china_superregion
+					superregion = east_indies_superregion
+					region = japan_region
+				}
+				has_port = yes
+			}
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			BritishIndianArmy_division2 = yes
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionNavy1"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			NOT = { has_country_modifier = lgModifiers_NavalAct }
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "lgModifiers_NavalAct"
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionNavy1b"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			has_country_modifier = lgModifiers_NavalAct
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			remove_country_modifier = "lgModifiers_NavalAct"
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	interaction = {
+		name = "lgEstates_InteractionEconomy1"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			NOT = { has_country_modifier = lgModifiers_EconomyAct }
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "lgModifiers_EconomyAct"
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionEconomy1b"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			has_country_modifier = lgModifiers_EconomyAct
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			remove_country_modifier = "lgModifiers_EconomyAct"
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionAdministration1"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			NOT = { has_country_modifier = lgModifiers_AdministrationAct }
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "lgModifiers_AdministrationAct"
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionAdministration1b"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			has_country_modifier = lgModifiers_AdministrationAct
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			remove_country_modifier = "lgModifiers_AdministrationAct"
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionDiplomacy1"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			NOT = { has_country_modifier = lgModifiers_DiplomacyAct }
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "lgModifiers_DiplomacyAct"
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	interaction = {
+		name = "lgEstates_InteractionDiplomacy1b"
+		icon = 6
+		
+		years_between_use = 0
+		
+		potential = {
+			has_country_modifier = lgModifiers_DiplomacyAct
+		}
+		
+		trigger = {
+			always = yes
+		}
+		
+		effect = {
+			remove_country_modifier = "lgModifiers_DiplomacyAct"
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

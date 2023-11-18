@@ -1,0 +1,4 @@
+﻿l_english:
+ lgEvents_flavorTEU.0001t: "Teutonic Order Converts to Protestantism"
+ lgEvents_flavorTEU.0001d: "After the frustrating failures on part of $EMPERORNAME$ to resolve the disputes over our eastern territories with Poland and a chance meeting with a Protestant leader, [Root.Monarch.GetTitle] [Root.Monarch.GetName] decided to convert to Protestantism and secularized the state of [Root.Country.GetName]. This is a real significant move to make in our history and there is no telling what will happen in future."
+ lgEvents_flavorTEU.0001a: "May God have mercy on us."

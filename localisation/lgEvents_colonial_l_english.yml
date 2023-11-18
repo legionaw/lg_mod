@@ -1,0 +1,7 @@
+﻿l_english:
+ lgEvents_Colonial.0001.t: "Treaty of Paris"
+ lgEvents_Colonial.0001.d: "The Treaty of Paris created an obligation for $COUNTRY$ to grant legal protections to the French minority and to respect their Catholic religion insofar as our mother country's law permits."
+ lgEvents_Colonial.0001.a: "OK"
+ lgEvents_Colonial.0002.t: "Catholic Province of Maryland"
+ lgEvents_Colonial.0002.d: "The government in London has decided to grant the lands comprising what became known as Maryland to Lord Baltimore, a Catholic who wished to establish a haven for the English Catholics."
+ lgEvents_Colonial.0002.a: "OK"

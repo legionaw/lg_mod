@@ -1,0 +1,68 @@
+################################################
+# Country Events for the United States				 #
+################################################
+
+namespace = lgEvents_flavorUSA
+
+# Declaration of Independence
+country_event = {
+	id = lgEvents_flavorUSA.0001
+	title = "lgEvents_flavorUSA.0001.t"
+	desc = "lgEvents_flavorUSA.0001.d"
+	picture = SIEGE_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		is_year = 1776
+		is_month = 6 # July
+		is_at_war = no
+		is_colonial_nation_of = GBR
+		capital_scope = {
+			colonial_region = colonial_eastern_america
+			is_core = ROOT
+		}
+		liberty_desire = 50
+		NOT = { has_country_flag = lgFlag_USAevent0001happened }
+	}
+	
+	immediate = {
+		set_country_flag = lgFlag_USAevent0001happened
+	}
+	
+	option = {
+		name = "lgEvents_flavorUSA.0001.a" #'teach them how to war' /Reversed Henry V
+		ai_chance = { factor = 100 }
+		ROOT = {
+			declare_war_with_cb = {
+				who = GBR
+				casus_belli = cb_colonial_independence_war
+			}
+		}
+		968 = {
+			change_controller = GBR #Massachusetts occupied
+		}
+		add_opinion = { who = FRA modifier = lgOpinionModifiers_AmericanIndependence }
+		add_opinion = { who = SPA modifier = lgOpinionModifiers_AmericanIndependence }
+		add_opinion = { who = FRA modifier = lgOpinionModifiers_AmericanIndependence2 }
+		add_opinion = { who = SPA modifier = lgOpinionModifiers_AmericanIndependence2 }
+		FRA = {
+			add_opinion = { who = ROOT modifier = lgOpinionModifiers_AmericanIndependence }
+			add_opinion = { who = ROOT modifier = lgOpinionModifiers_AmericanIndependence2 }
+			#country_event = { id = lgEvents_flavorUSA.0002 days = 1 }
+		}
+		SPA = {
+			add_opinion = { who = ROOT modifier = lgOpinionModifiers_AmericanIndependence }
+			add_opinion = { who = ROOT modifier = lgOpinionModifiers_AmericanIndependence2 }
+		}
+		create_alliance = FRA
+		create_alliance = SPA
+		add_republican_tradition = 100
+	}
+	
+	option = {
+		name = "lgEvents_flavorUSA.0001.b" #Nah
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+}

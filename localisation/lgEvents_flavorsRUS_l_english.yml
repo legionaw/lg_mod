@@ -1,0 +1,13 @@
+﻿l_english:
+ lgEvents_flavorRUS.0001.t: "The Alaska Purchase"
+ lgEvents_flavorRUS.0001.d: "Spain is hard pressed for cash as it was set on a dream of worldwide hegemony. They therefore offered the territory of Alaska, a large colony on the northwestern corner of the North America, against a lump sum of 15 million dollars. The $MONARCHTITLE$ and the court agreed. Your Majesty, you would only get the province that Portugal presently owns for a lump sum of 1000 ducats. How will you choose, my $MONARCHTITLE$?"
+ lgEvents_flavorRUS.0001.a: "Accept Offer"
+ lgEvents_flavorRUS.0001.b: "Decline Offer"
+ 
+ RUS_event.EVTNAME07011: "Russification in Prussia"
+ RUS_event.EVTDESC07011: "Ever since Prussia was joined in union with our Russian Empire, our Russification policy there has soured our relations with our partner. The aristocracy is becoming restless and peasants are giving stiff resistence."
+ RUS_event.EVTOPTA07011: "Damn them!"
+ 
+ RUS_event.EVTNAME07012: "Russification abandoned in Prussia"
+ RUS_event.EVTDESC07012: "Because Prussia is no longer in union with our great Russian Empire, they immediately put stop to Russification policy in their country."
+ RUS_event.EVTOPTA07012: "Damn them!"

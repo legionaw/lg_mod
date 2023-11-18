@@ -1,0 +1,88 @@
+namespace = lgEvents_CapitalChange
+
+# Rio de Janiero becomes the new capital of Portuguese Brazil / independent Brazil
+country_event = {
+	id = lgEvents_CapitalChange.0001
+	title = "lgEvents_CapitalChange.0001t"
+	desc = "lgEvents_CapitalChange.0001d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		is_year = 1763
+		capital_scope = {
+			colonial_region = colonial_brazil
+			is_core = ROOT
+		}
+		OR = {
+			tag = BRZ
+			is_colonial_nation = yes
+			#is_colonial_nation_of = POR
+		}
+		primary_culture = portugese
+		763 = {
+			owned_by = ROOT
+			NOT = {
+				is_capital = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {		# Glorious!
+		name = "lgEvents_CapitalChange.0001.a"
+		ai_chance = { factor = 100 }
+		set_capital = 763
+		add_prestige = 10
+	}
+	option = {		# Nay
+		name = "lgEvents_CapitalChange.0001.b"
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+}
+
+# Kingston becomes the new capital of English / British West Indies
+country_event = {
+	id = lgEvents_CapitalChange.0002
+	title = "lgEvents_CapitalChange.0002t"
+	desc = "lgEvents_CapitalChange.0002d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		capital_scope = {
+			colonial_region = colonial_the_carribean
+			is_core = ROOT
+		}
+		is_colonial_nation = yes
+		primary_culture = english
+		487 = {
+			owned_by = ROOT
+			NOT = {
+				is_capital = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {		# Glorious!
+		name = "lgEvents_CapitalChange.0002.a"
+		ai_chance = { factor = 100 }
+		set_capital = 487
+		add_prestige = 10
+	}
+	option = {		# Nay
+		name = "lgEvents_CapitalChange.0002.b"
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+}

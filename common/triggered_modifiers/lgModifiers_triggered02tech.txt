@@ -1,0 +1,225 @@
+# # Native American Tech
+# american_tech = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		OR = {
+# 			technology_group = north_american
+# 			technology_group = south_american
+# 		}
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	technology_cost = 2.5
+# 	embracement_cost = 2.5
+# 	global_institution_spread = -0.9
+# }
+
+# # Native American Tech
+# american_tech2 = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		OR = {
+# 			technology_group = mesoamerican
+# 			technology_group = andean
+# 		}
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	technology_cost = 1.5
+# 	embracement_cost = 1.5
+# 	global_institution_spread = -0.9
+# }
+
+# # Sub-Saharan African Tech
+# african_tech = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		technology_group = sub_saharan
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	technology_cost = 0.6
+# 	embracement_cost = 0.6
+# 	global_institution_spread = -1
+# }
+
+# # Central African Tech
+# african_tech2 = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		technology_group = central_african
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	technology_cost = 0.65
+# 	embracement_cost = 0.65
+# 	global_institution_spread = -1.1
+# }
+
+# # East African Tech
+# african_tech3 = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		technology_group = east_african
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	technology_cost = 0.65
+# 	embracement_cost = 0.65
+# 	global_institution_spread = -0.9
+# }
+
+# South African Tech
+#african_tech4 = {
+#	potential = {
+#	}
+#	trigger = {
+#		technology_group = south_african
+#		NOT = {
+#			has_country_modifier = lg_westernized
+#		}
+#	}
+#	technology_cost = 0.65
+#	embracement_cost = 0.65
+#	global_institution_spread = -1.1
+#}
+
+# West African Tech
+#african_tech5 = {
+#	potential = {
+#	}
+#	trigger = {
+#		technology_group = west_african
+#		NOT = {
+#			has_country_modifier = lg_westernized
+#		}
+#	}
+#	technology_cost = 0.65
+#	embracement_cost = 0.65
+#	global_institution_spread = -1
+#}
+
+# # Indian Tech
+# indian_tech = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		technology_group = indian
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	technology_cost = 0.5
+# 	embracement_cost = 0.5
+# 	global_institution_spread = -0.6
+# }
+
+# # Chinese Tech
+# chinese_tech = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		technology_group = chinese
+# 		#technology_group = nomad_group
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	technology_cost = 0.6
+# 	embracement_cost = 0.6
+# 	global_institution_spread = -0.55
+# }
+
+# # Nomad Tech
+# nomad_tech = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		technology_group = nomad_group
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	technology_cost = 0.75
+# 	embracement_cost = 0.75
+# 	global_institution_spread = -0.6
+# }
+
+# # Muslim Tech
+# muslim_tech = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		technology_group = muslim
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	technology_cost = 0.4
+# 	embracement_cost = 0.4
+# 	global_institution_spread = -0.5
+# }
+
+# # Ottoman Tech
+# ottoman_tech = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		technology_group = ottoman
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	technology_cost = 0.25
+# 	embracement_cost = 0.25
+# 	global_institution_spread = -0.4
+# }
+
+# # Eastern Tech
+# eastern_tech = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		technology_group = eastern
+# 		NOT = {
+# 			has_country_modifier = lg_westernized
+# 		}
+# 	}
+# 	embracement_cost = -0.5
+# 	global_institution_spread = 0.5
+# }
+
+# # Western Tech
+# western_tech = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		technology_group = western
+# 	}
+# 	embracement_cost = -1
+# 	global_institution_spread = 1
+# }
+
+# # Westernized Tech
+# western_tech2 = {
+# 	potential = {
+# 	}
+# 	trigger = {
+# 		NOT = {
+# 			technology_group = western
+# 		}
+# 		has_country_modifier = lg_westernized
+# 	}
+# 	embracement_cost = -0.5
+# 	global_institution_spread = 0.5
+# }

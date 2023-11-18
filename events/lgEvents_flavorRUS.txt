@@ -1,0 +1,81 @@
+namespace = lgEvents_flavorRUS
+
+# The Alaska Purchase
+country_event = {
+	id = lgEvents_flavorRUS.0001
+	title = "lgEvents_flavorRUS.0001.t"
+	desc = "lgEvents_flavorRUS.0001.d"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_alaska01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_alaska01 }
+		POR = {
+			ai = yes
+			has_country_flag = lgFlag_columbia01
+		}
+		tag = RUS
+		colonial_alaska = {
+			OR = {
+				owned_by = POR
+				owner = {
+					is_colonial_nation_of = POR
+				}
+			}
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorRUS.0001.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		reverse_add_opinion = { 
+			who = POR 
+			modifier = opinion_alaska
+			years = 50
+		}
+		every_province = {
+			limit = {
+				colonial_region = colonial_alaska
+				OR = {
+					owned_by = POR
+					owner = {
+						is_colonial_nation_of = POR
+					}
+				}
+			}
+			owner = {
+				remove_core = PREV
+			}
+			add_core = ROOT
+			cede_province = ROOT
+			if = {
+				limit = {
+					culture = portugese
+				}
+				change_culture = russian
+			}
+		}
+		POR = {
+			add_treasury = 1000
+		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorRUS.0001.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		add_opinion = { 
+			who = POR
+			modifier = opinion_disappointed
+			years = 20
+		}
+	}
+}

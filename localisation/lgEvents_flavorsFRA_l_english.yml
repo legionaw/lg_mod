@@ -1,0 +1,55 @@
+﻿l_english:
+ lgEvents_flavorFRA.0001t: "Rise of the Bourbons"
+ lgEvents_flavorFRA.0001d: "Since $MONARCH$ lacks a heir, the [Root.GetAdjectiveCap] Parlement decided to pass a law to settle the succession and chose Henri de Bourbon as the heir. This law must be approved by $MONARCH$."
+ lgEvents_flavorFRA.0001a: "I will not give my assent to this!"
+ lgEvents_flavorFRA.0001b: "I will give my assent to this."
+ 
+ lgEvents_flavorFRA.0002t: "French-Algeria Crisis"
+ lgEvents_flavorFRA.0002d: "A local ruler in Algeria has struck our ambassador with his fly-whisk over the dispute about payments for food supplies! Now people of $COUNTRY$ are calling for the war to avenge this insult to our national honor. We could also possibly use this as pretext to conquer Algeria."
+ lgEvents_flavorFRA.0002a: "Nah."
+ lgEvents_flavorFRA.0002b: "We will not forget this insult!"
+ 
+ lgEvents_flavorFRA.0003t: "Growing Tension with France"
+ lgEvents_flavorFRA.0003d: "Because a local ruler in our country has struck the French ambassador with his fly-whisk in a diplomatic incident, France is now threatening $COUNTRY$ with retaliatory consequences for this."
+ lgEvents_flavorFRA.0003a: "This is outrageous!"
+ 
+ lgEvents_flavorFRA.0004t: "French ambitions in Indochina"
+ lgEvents_flavorFRA.0004d: "A local ruler in Indochina has insulted our national honor by imprisoning our ambassador on some filmsy ground! Now people of $COUNTRY$ are calling for the war to avenge this insult to our national honor. We could also possibly use this as pretext to conquer Indochina."
+ lgEvents_flavorFRA.0004a: "Nah."
+ lgEvents_flavorFRA.0004b: "We will not forget this insult!"
+ 
+ lgEvents_flavorFRA.0005t: "Troubles in $COUNTRY$"
+ lgEvents_flavorFRA.0005d: "Things have not been getting well lately throughout the kingdom of France. Riots and disorders are breaking out across the country, causing damages and getting people killed. Clearly, something need to be done about it."
+ lgEvents_flavorFRA.0005a: "Uh oh!"
+ 
+ lgEvents_flavorFRA.0006t: "Troubles over in $COUNTRY$"
+ lgEvents_flavorFRA.0006d: "Troubles seem to be now over in $COUNTRY$. Peace and order has been restored."
+ lgEvents_flavorFRA.0006a: "Phew."
+ 
+ lgEvents_flavorFRA.0007.t: "The Louisiana Purchase"
+ lgEvents_flavorFRA.0007.d: "Castile is hard pressed for cash as it was set on a dream of worldwide hegemony. They therefore offered the Louisiana Territory, a vast region between the Mississippi and the Rockies against a lump sum of 15 million dollars. The $MONARCHTITLE$ and the court agreed. Your Majesty, you would only get the province that France presently owns for a lump sum of 1000 ducats. How will you choose, my $MONARCHTITLE$?"
+ lgEvents_flavorFRA.0007.a: "Accept Offer"
+ lgEvents_flavorFRA.0007.b: "Decline Offer"
+ 
+ lgEvents_flavorFRA.0008.t: "The Canada Purchase"
+ lgEvents_flavorFRA.0008.d: "Spain is hard pressed for cash as it was set on a dream of worldwide hegemony. They therefore offered the Canada Territory, a vast region between the Mississippi and the Atlantic against a lump sum of 15 million dollars. The $MONARCHTITLE$ and the court agreed. Your Majesty, you would only get the province that Spain presently owns for a lump sum of 1000 ducats. How will you choose, my $MONARCHTITLE$?"
+ lgEvents_flavorFRA.0008.a: "Accept Offer"
+ lgEvents_flavorFRA.0008.b: "Decline Offer"
+ 
+ lgEvents_flavorFRA.0009.t: "The Breton Purchase"
+ lgEvents_flavorFRA.0009.d: "Scotland is hard pressed for cash. They therefore offered the Breton territory against a lump sum of 15 million dollars. The $MONARCHTITLE$ and the court agreed. Your Majesty, you would only get the province that Scotland presently owns for a lump sum of 1000 ducats. How will you choose, my $MONARCHTITLE$?"
+ lgEvents_flavorFRA.0009.a: "Accept Offer"
+ lgEvents_flavorFRA.0009.b: "Decline Offer"
+ 
+ lgEvents_flavorFRA.0010.t: "The Guadelupe Purchase"
+ lgEvents_flavorFRA.0010.d: "England is hard pressed for cash as it was set on a dream of worldwide hegemony. They therefore offered the island of Guadelupe, an island in the Caribbean against a lump sum of 15 million dollars. The $MONARCHTITLE$ and the court agreed. Your Majesty, you would only get the province that England presently owns for a lump sum of 1000 ducats. How will you choose, my $MONARCHTITLE$?"
+ lgEvents_flavorFRA.0010.a: "Accept Offer"
+ lgEvents_flavorFRA.0010.b: "Decline Offer"
+ 
+ lgEvents_flavorFRA.0011.t: "The Martinique Purchase"
+ lgEvents_flavorFRA.0011.d: "England is hard pressed for cash as it was set on a dream of worldwide hegemony. They therefore offered the island of Martinique, an island in the Caribbean against a lump sum of 15 million dollars. The $MONARCHTITLE$ and the court agreed. Your Majesty, you would only get the province that England presently owns for a lump sum of 1000 ducats. How will you choose, my $MONARCHTITLE$?"
+ lgEvents_flavorFRA.0011.a: "Accept Offer"
+ lgEvents_flavorFRA.0011.b: "Decline Offer"
+ 
+ french_troubles: "Troubles in France"
+ desc_french_troubles: "Riots and disorder are breaking out in our country!"

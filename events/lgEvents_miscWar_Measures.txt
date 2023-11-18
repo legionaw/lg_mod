@@ -1,0 +1,27 @@
+########################################
+# Repeal of the War Measures
+########################################
+
+namespace = war_tax
+
+# Repeal of the Emergency War Tax
+country_event = {
+	id = war_tax.1041
+	title = "war_tax.1041t"
+	desc = "war_tax.1041d"
+	picture = ECONOMY_eventPicture
+	
+	trigger = { 
+		has_country_modifier = tax_hike
+		is_at_war = no 
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {			# OK
+		name = "war_tax.1041.a"
+		remove_country_modifier = tax_hike 
+	}
+}

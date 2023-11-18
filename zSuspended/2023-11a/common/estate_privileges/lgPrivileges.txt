@@ -1,0 +1,790 @@
+lgEstates_InteractionMoney1 = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	on_granted = {
+		add_treasury = 50000
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionMoney2 = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	on_granted = {
+		add_treasury = 25000
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#####
+
+lgEstates_InteractionADM1 = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		if = {
+			limit = {
+				adm_power = 249
+			}
+			add_adm_power = 750
+		}
+		if = {
+			limit = {
+				#adm_power = -999
+				NOT = {
+					adm_power = 249
+				}
+			}
+			add_adm_power = 750
+		}
+		#add_dip_power = 750
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionDIP1 = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		if = {
+			limit = {
+				dip_power = 249
+			}
+			add_dip_power = 750
+		}
+		if = {
+			limit = {
+				#dip_power = -999
+				NOT = {
+					dip_power = 249
+				}
+			}
+			add_dip_power = 750
+		}
+		#add_dip_power = 750
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionMIL1 = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		if = {
+			limit = {
+				mil_power = 249
+			}
+			add_mil_power = 750
+		}
+		if = {
+			limit = {
+				#mil_power = -999
+				NOT = {
+					mil_power = 249
+				}
+			}
+			add_mil_power = 750
+		}
+		#add_mil_power = 750
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionBURLOY = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	can_select = {
+		has_estate = estate_burghers
+		ai = no
+	}
+	
+	on_granted = {
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
+		}
+		add_treasury = -1000
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionCHRLOY = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	can_select = {
+		has_estate = estate_church
+		ai = no
+	}
+	
+	on_granted = {
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_treasury = -1000
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionNOBLOY = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	is_valid = {
+		has_estate = estate_nobles
+	}
+	
+	can_select = {
+		has_estate = estate_nobles
+		ai = no
+	}
+	
+	on_granted = {
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_treasury = -1000
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionBURINF = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	can_select = {
+		has_estate = estate_burghers
+		ai = no
+	}
+	
+	on_granted = {
+		add_estate_influence_modifier = {
+			estate = estate_burghers
+				desc = lgEstate_ModifiersSuppressed
+				influence = -10
+				duration = 7300
+		}
+		add_mil_power = -250
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionCHRINF = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	can_select = {
+		has_estate = estate_church
+		ai = no
+	}
+	
+	on_granted = {
+		add_estate_influence_modifier = {
+			estate = estate_church
+				desc = lgEstate_ModifiersSuppressed
+				influence = -10
+				duration = 7300
+		}
+		add_mil_power = -250
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionNOBINF = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	is_valid = {
+		has_estate = estate_nobles
+	}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+				desc = lgEstate_ModifiersSuppressed
+				influence = -10
+				duration = 7300
+		}
+		add_mil_power = -250
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionReligion1 = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	is_valid = {
+		religion = catholic
+	}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		add_papal_influence = 100
+		add_treasury = -1000
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#### NEW AS OF AUGUST 12TH 2018 ####
+
+lgEstates_InteractionArmy1 = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	is_valid = {
+		NOT = { has_country_modifier = lgModifiers_ArmyAct }
+	}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		add_country_modifier = {
+			name = lgModifiers_ArmyAct
+			duration = -1
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+
+lgEstates_InteractionArmy1b = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	is_valid = {
+		has_country_modifier = lgModifiers_ArmyAct
+	}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		remove_country_modifier = lgModifiers_ArmyAct
+		remove_estate_privilege = lgEstates_InteractionArmy1
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.002 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionIndianArmy1 = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	is_valid = {
+		NOT = { has_country_modifier = lgModifiers_CompanyArmy }
+		any_owned_province = {
+			OR = {
+				superregion = india_superregion
+				superregion = china_superregion
+				superregion = east_indies_superregion
+				region = japan_region
+			}
+			has_port = yes
+		}
+	}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		add_country_modifier = {
+			name = lgModifiers_CompanyArmy
+			duration = -1
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#REVOKE
+lgEstates_InteractionIndianArmy1b = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	is_valid = {
+		has_country_modifier = lgModifiers_CompanyArmy
+	}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		remove_country_modifier = lgModifiers_CompanyArmy
+		remove_estate_privilege = lgEstates_InteractionIndianArmy1
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.003 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionIndianArmy2 = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	is_valid = {
+		any_owned_province = {
+			OR = {
+				superregion = india_superregion
+				superregion = china_superregion
+				superregion = east_indies_superregion
+				region = japan_region
+			}
+			has_port = yes
+		}
+	}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		BritishIndianArmy_division2 = yes
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+### NAVAL ACT ###
+lgEstates_InteractionNavy1 = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	is_valid = {
+		NOT = { has_country_modifier = lgModifiers_NavalAct }
+	}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		add_country_modifier = {
+			name = lgModifiers_NavalAct
+			duration = -1
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#REVOKE
+lgEstates_InteractionNavy1b = {
+	icon = privilege_promote_purbias
+	
+	is_valid = {
+		has_country_modifier = lgModifiers_NavalAct
+	}
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		remove_country_modifier = lgModifiers_NavalAct
+		remove_estate_privilege = lgEstates_InteractionNavy1
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.004 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+### ECONOMY ACT ###
+lgEstates_InteractionEconomy1 = {
+	icon = privilege_promote_purbias
+	
+	is_valid = {
+		NOT = { has_country_modifier = lgModifiers_EconomyAct }
+	}
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		add_country_modifier = {
+			name = lgModifiers_EconomyAct
+			duration = -1
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#REVOKE
+lgEstates_InteractionEconomy1b = {
+	icon = privilege_promote_purbias
+	
+	penalties = {}
+	
+	is_valid = {
+		has_country_modifier = lgModifiers_EconomyAct
+	}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		remove_country_modifier = lgModifiers_EconomyAct
+		remove_estate_privilege = lgEstates_InteractionEconomy1
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.005 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+### ADMINISTRATION ACT ###
+lgEstates_InteractionAdministration1 = {
+	icon = privilege_promote_purbias
+	
+	is_valid = {
+		NOT = { has_country_modifier = lgModifiers_AdministrationAct }
+	}
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		add_country_modifier = {
+			name = lgModifiers_AdministrationAct
+			duration = -1
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionAdministration1b = {
+	icon = privilege_promote_purbias
+	
+	is_valid = {
+		has_country_modifier = lgModifiers_AdministrationAct
+	}
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		remove_country_modifier = lgModifiers_AdministrationAct
+		remove_estate_privilege = lgEstates_InteractionAdministration1
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.006 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+### DIPLOMACY ACT ###
+lgEstates_InteractionDiplomacy1 = {
+	icon = privilege_promote_purbias
+#	loyalty = 20
+	is_valid = {
+		NOT = { has_country_modifier = lgModifiers_DiplomacyAct }
+	}
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		add_country_modifier = {
+			name = lgModifiers_DiplomacyAct
+			duration = -1
+		}
+	}
+	
+#	on_revoked = {
+#		remove_country_modifier = lgModifiers_DiplomacyAct
+#		add_estate_loyalty = {
+#			estate = lgEstate_state
+#			loyalty = 20
+#		}
+#	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+lgEstates_InteractionDiplomacy1b = {
+	icon = privilege_promote_purbias
+	
+	is_valid = {
+		has_country_modifier = lgModifiers_DiplomacyAct
+	}
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		remove_country_modifier = lgModifiers_DiplomacyAct
+		remove_estate_privilege = lgEstates_InteractionDiplomacy1
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.007 days = 1 }
+		}
+	}
+	
+	#on_revoked = { }
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+### EXECUTIVE ACTION ###
+lgEstates_Privileges1 = {
+	icon = privilege_promote_purbias
+	land_share = -100
+	
+	is_valid = {
+		has_estate = lgEstate_state
+	}
+	
+	penalties = {}
+	
+	can_select = {
+		ai = no
+	}
+	
+	on_granted = {
+		hidden_effect = {
+			country_event = { id = lgEvents_estates.001 days = 1 }
+		}
+	}
+	
+	benefits = {}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

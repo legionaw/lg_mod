@@ -1,0 +1,94 @@
+namespace = lgEvents_flavorDAN
+
+# The St. Thomas Purchase
+country_event = {
+	id = lgEvents_flavorDAN.0001
+	title = "lgEvents_flavorDAN.0001.t"
+	desc = "lgEvents_flavorDAN.0001.d"
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	immediate = {
+		set_country_flag = lgFlag_st_thomas01
+	}
+	
+	trigger = {
+		NOT = { has_country_flag = lgFlag_st_thomas01 }
+		SPA = {
+			ai = yes
+		}
+		tag = DAN
+		493 = {
+			OR = {
+				owned_by = SPA
+				owner = {
+					is_colonial_nation_of = SPA
+				}
+			}
+		}
+		treasury = 1000
+	}
+	
+	mean_time_to_happen = { months = 20 }
+	
+	option = {
+		name = "lgEvents_flavorDAN.0001.a" # Accept Offer
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		add_opinion = { 
+			who = SPA
+			modifier = opinion_st_thomas
+			years = 50
+		}
+		493 = {
+			if = {
+				limit = {
+					OR = {
+						owned_by = SPA
+						owner = {
+							is_colonial_nation_of = SPA
+						}
+					}
+				}
+				remove_core = PREV
+				add_core = ROOT
+				cede_province = ROOT
+			}
+			if = {
+				limit = {
+					culture = castillian
+				}
+				change_culture = danish
+			}
+		}
+		SPA = {
+			add_treasury = 1000
+		}
+#		if = {
+#			limit = {
+#				493 = {
+#					OR = {
+#						owned_by = SPA
+#						owner = {
+#							is_colonial_nation_of = SPA
+#						}
+#					}
+#				}
+#			}
+#			owner = {
+#				remove_core = PREV
+#			}
+#		}
+	}
+	
+	option = {
+		name = "lgEvents_flavorDAN.0001.b" # Decline Offer
+		ai_chance = { factor = 0 }
+		add_opinion = { 
+			who = SPA
+			modifier = opinion_disappointed
+			years = 20
+		}
+	}
+}

@@ -1,0 +1,50 @@
+namespace = anglo_portuguese
+
+# The Reconfirmation
+country_event = {
+	id = anglo_portuguese.0007
+	title = "anglo_portuguese.EVTNAME0007"
+	desc = "anglo_portuguese.EVTDESC0007"
+	picture = COURT_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		NOT = {
+			has_opinion_modifier = {
+				who = POR
+				modifier = treaty_of_windsor
+			}
+		}
+		is_year = 1444
+		NOT = { is_year = 1800 }
+		OR = {
+			AND = {
+				tag = ENG
+				NOT = { exists = GBR }
+			}
+			tag = GBR
+		}
+		any_known_country = {
+			tag = POR
+			ai = yes
+			is_subject = no
+			num_of_cities = 4
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "anglo_portuguese.EVTOK0007"
+		add_opinion = { who = POR modifier = treaty_of_windsor }
+		POR = {
+			add_opinion = { who = ROOT modifier = treaty_of_windsor }
+		}
+	}
+}

@@ -1,0 +1,133 @@
+namespace = lgEvents_Colonial
+
+################################################
+# Country Events			 												 #
+################################################
+
+# Treaty of Paris in Quebec / Lower Canada #
+country_event = { 
+	id = lgEvents_Colonial.0001
+	title = lgEvents_Colonial.0001.t
+	desc = lgEvents_Colonial.0001.d
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		capital_scope = {
+			colonial_region = colonial_canada
+			is_core = ROOT
+		}
+		culture_group = british
+		OR = {
+			religion = protestant
+			religion = anglican
+		}
+		any_owned_province = {
+			is_capital = no
+			lgTriggers_frenchcanada = yes
+			NOT = { has_province_modifier = lgModifiers_CatholicEntrenched }
+			NOT = { has_missionary = yes }
+			NOT = { has_construction = culture }
+		}
+	}
+	
+	option = {
+	name = lgEvents_Colonial.0001.a  # OK
+		every_owned_province = {
+			limit = {
+				is_capital = no
+				lgTriggers_frenchcanada = yes
+				NOT = { has_province_modifier = lgModifiers_CatholicEntrenched }
+				NOT = { has_missionary = yes }
+				NOT = { has_construction = culture }
+			}
+			add_province_modifier = {
+				name = "lgModifiers_CatholicEntrenched"
+				duration = -1
+			}
+			if = {
+				limit = {
+					NOT = {
+						religion = catholic
+					}
+				}
+				change_religion = catholic
+			}
+			if = {
+				limit = {
+					NOT = {
+						culture = cosmopolitan_french
+					}
+				}
+				change_culture = cosmopolitan_french
+			}
+		}
+	}
+}
+
+# Maryland as a Catholic province #
+country_event = { 
+	id = lgEvents_Colonial.0002
+	title = lgEvents_Colonial.0002.t
+	desc = lgEvents_Colonial.0002.d
+	picture = DIPLOMACY_eventPicture
+	
+	major = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		capital_scope = {
+			colonial_region = colonial_eastern_america
+			is_core = ROOT
+		}
+		culture_group = british
+		OR = {
+			religion = protestant
+			religion = anglican
+		}
+		maryland_area = {
+			owned_by = ROOT
+		}
+		any_owned_province = {
+			is_capital = no
+			area = maryland_area
+			religion = catholic
+			NOT = { has_province_modifier = lgModifiers_CatholicEntrenched }
+			NOT = { has_missionary = yes }
+			NOT = { has_construction = culture }
+		}
+	}
+	
+	option = {
+	name = lgEvents_Colonial.0002.a  # OK
+		every_owned_province = {
+			limit = {
+				is_capital = no
+				area = maryland_area
+				NOT = { has_province_modifier = lgModifiers_CatholicEntrenched }
+				NOT = { has_missionary = yes }
+				NOT = { has_construction = culture }
+			}
+			add_province_modifier = {
+				name = "lgModifiers_CatholicEntrenched"
+				duration = -1
+			}
+			if = {
+				limit = {
+					NOT = {
+						religion = catholic
+					}
+				}
+				change_religion = catholic
+			}
+		}
+	}
+}

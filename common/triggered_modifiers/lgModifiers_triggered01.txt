@@ -1,0 +1,24 @@
+# Incentive for colonization
+lgModifiers_YesColony = {
+	potential = {
+	}
+	trigger = {
+		ai = yes
+		num_of_colonists = 1
+		is_colonial_nation = yes
+		OR = {
+			lgTriggers_PortugueseBrazil = yes
+			lgTriggers_SpanishColonies = yes
+			lgTriggers_FrenchLouisiana = yes
+		}
+	}
+	
+	global_colonial_growth = 200
+}
+
+# Human identifier
+#lgModifiers_Human = {
+#	trigger = {
+#		ai = no
+#	}
+#}

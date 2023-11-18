@@ -1,0 +1,133 @@
+########################################
+# Colonization Venture
+########################################
+
+namespace = lg_event
+
+# Colonization Venture
+country_event = {
+	id = lg_event.0008
+	title = "lg_event.0008t"
+	desc = "lg_event.0008d"
+	picture = COLONIZATION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		is_year = 1500
+		num_of_ports = 1
+		NOT = { has_idea_group = exploration_ideas }
+		NOT = { has_idea_group = expansion_ideas }
+		NOT = { has_country_modifier = custom_colonization }
+		OR = {
+			tag = PIS
+			tag = SIE
+			tag = DAN
+			tag = NOR
+			tag = SWE
+			tag = KNI
+			tag = BYZ
+			tag = FRA
+			OR = {
+				AND = {
+					tag = MOS
+					NOT = {
+						exists = RUS
+					}
+				}
+				tag = RUS
+			}
+			OR = {
+				AND = {
+					tag = BRA
+					NOT = {
+						exists = PRU
+					}
+				}
+				tag = PRU
+			}
+			OR = {
+				AND = {
+					tag = HOL
+					NOT = {
+						exists = NED
+					}
+				}
+				tag = NED
+			}
+			OR = {
+				AND = {
+					tag = SAV
+					NOT = {
+						exists = SPI
+					}
+				}
+				tag = SPI
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.8
+			is_year = 1500
+			NOT = {
+				is_year = 1550
+			}
+		}
+		modifier = {
+			factor = 0.6
+			is_year = 1550
+			NOT = {
+				is_year = 1600
+			}
+		}
+		modifier = {
+			factor = 0.4
+			is_year = 1600
+			NOT = {
+				is_year = 1650
+			}
+		}
+		modifier = {
+			factor = 0.2
+			is_year = 1650
+			NOT = {
+				is_year = 1700
+			}
+		}
+		modifier = {
+			factor = 0.1
+			is_year = 1700
+		}
+		modifier = {
+			factor = 0.1
+			tag = RUS
+		}
+		modifier = {
+			factor = 0.1
+			tag = FRA
+		}
+	}
+	
+	option = {			# Yes
+		name = "custom_event.EVTOPTAYE"
+		ai_chance = {
+			factor = 90
+		}
+		add_country_modifier = {
+			name = custom_colonization
+			duration = -1
+		}
+		add_prestige = 10
+	}
+	
+	option = {			# No
+		name = "custom_event.EVTOPTNAY"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -10
+	}
+}

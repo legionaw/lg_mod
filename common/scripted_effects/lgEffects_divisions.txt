@@ -1,0 +1,223 @@
+BritishArmy_divisions = {
+	random_owned_province = {
+		limit = {
+			controlled_by = ROOT
+			region = british_isles_region
+			NOT = { area = munster_area }
+			NOT = { area = connacht_area }
+			NOT = { area = leinster_area }
+			NOT = { area = ulster_area }
+			NOT = { units_in_province = 1 }
+		}
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+	}
+	random_owned_province = {
+		limit = {
+			controlled_by = ROOT
+			region = british_isles_region
+			NOT = { area = munster_area }
+			NOT = { area = connacht_area }
+			NOT = { area = leinster_area }
+			NOT = { area = ulster_area }
+			NOT = { units_in_province = 1 }
+		}
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+	}
+	random_owned_province = {
+		limit = {
+			controlled_by = ROOT
+			region = british_isles_region
+			NOT = { area = munster_area }
+			NOT = { area = connacht_area }
+			NOT = { area = leinster_area }
+			NOT = { area = ulster_area }
+			NOT = { units_in_province = 1 }
+		}
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+	}
+}
+
+BritishArmy_divisionsIreland = {
+	if = {
+		limit = {
+			NOT = { mil_tech = 7 }
+		}
+		add_manpower = -16
+		add_mil_power = -16
+	}
+	if = {
+		limit = {
+			mil_tech = 7
+		}
+		add_manpower = -20
+		add_mil_power = -20
+	}
+	random_owned_province = {
+		limit = {
+			controlled_by = ROOT
+			OR = {
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+				area = ulster_area
+			}
+			NOT = { units_in_province = 1 }
+		}
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+	}
+}
+
+BritishIndianArmy_division = {
+	add_manpower = -20
+	add_mil_power = -20
+	random_owned_province = {
+		limit = {
+			controlled_by = ROOT
+			OR = {
+				region = bengal_region
+				region = hindusthan_region
+				region = deccan_region
+				region = coromandel_region
+				region = west_india_region
+				region = burma_region
+			}
+			NOT = { units_in_province = 1 }
+		}
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		infantry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+	}
+}
+
+BritishIndianArmy_division2 = {
+	add_manpower = -20
+	add_mil_power = -20
+	add_treasury = -340
+	random_owned_province = {
+		limit = {
+			controlled_by = ROOT
+			OR = {
+				region = bengal_region
+				region = hindusthan_region
+				region = deccan_region
+				region = coromandel_region
+				region = west_india_region
+				region = burma_region
+			}
+			NOT = { units_in_province = 1 }
+		}
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		rajput_infantry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		cavalry = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+		artillery = ROOT
+	}
+}

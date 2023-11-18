@@ -1,0 +1,320 @@
+#song = {
+#	name = "maintheme"
+#	
+#	chance = {
+#		modifier = {
+#			factor = 0			#only played in mainscreen.
+#		}
+#	}
+#}
+
+
+song = {
+	name = "ode_to_joy"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			is_year = 1800
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				is_year = 1800
+			}
+		}
+	}
+}
+
+
+song = {
+	name = "godfather2_ending"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+
+song = {
+	name = "thecoronation_titletheme"
+	
+	chance = {
+		modifier = {
+			factor = 1.25
+			is_year = 1800
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				is_year = 1800
+			}
+		}
+	}
+}
+
+
+song = {
+	name = "mood_nightoverourempire"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+
+song = {
+	name = "conquistador_maintheme"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+
+song = {
+	name = "theroyalmarch"
+	
+	chance = {
+		modifier = {
+			factor = 1.25
+			is_year = 1800
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				is_year = 1800
+			}
+		}
+	}
+}
+
+
+song = {
+	name = "startrek_tmp_ilia_theme"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+
+song = {
+	name = "startrek_three_opening"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+
+song = {
+	name = "startrek_intodarkness_londoncalling"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+
+song = {
+	name = "startrek_four_homeagain"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+
+song = {
+	name = "startrek_six_overture"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+song = {
+	name = "godfather_lovetheme"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+
+song = {
+	name = "johanswaltz"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			is_year = 1700
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				is_year = 1800
+			}
+		}
+	}
+}
+
+
+#song = {
+#	name = "thestonemasons"
+#	
+#	chance = {
+#		modifier = {
+#			factor = 1
+#		}
+#	}
+#}
+
+song = {
+	name = "startrek_ds9ma"
+	
+	chance = {
+		modifier = {
+			factor = 1.25
+		}
+	}
+}
+
+song = {
+	name = "crusaderkings2_maintitle"
+	
+	chance = {
+		modifier = {
+			factor = 1.25
+			is_year = 1444
+		}
+		modifier = {
+			factor = 0
+			is_year = 1500
+		}
+	}
+	#volume = 0.48
+}
+
+song = {
+	name = "thelastcrusade_finale"
+	
+	chance = {
+		modifier = {
+			factor = 1.25
+			is_year = 1444
+		}
+		modifier = {
+			factor = 0
+			is_year = 1500
+		}
+	}
+	#volume = 0.48
+}
+
+song = {
+	name = "asimplesongforcommoners"
+	
+	chance = {
+		modifier = {
+			factor = 1.25
+			is_year = 1444
+		}
+		modifier = {
+			factor = 0
+			is_year = 1500
+		}
+	}
+	#volume = 0.48
+}
+
+song = {
+	name = "coeurdelion"
+	
+	chance = {
+		modifier = {
+			factor = 1.25
+			is_year = 1444
+		}
+		modifier = {
+			factor = 0
+			is_year = 1500
+		}
+	}
+	#volume = 0.48
+}
+
+song = {
+	name = "intaberna"
+	
+	chance = {
+		modifier = {
+			factor = 1.25
+			is_year = 1444
+		}
+		modifier = {
+			factor = 0
+			is_year = 1500
+		}
+	}
+	#volume = 0.48
+}
+
+#song = {
+#	name = "commerceinthepeninsula"
+#	
+#	chance = {
+#		modifier = {
+#			factor = 1
+#			is_at_war = yes
+#		}
+#	}
+#}
+
+song = {
+	name = "highlandwanderer"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+song = {
+	name = "tea_time"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			is_year = 1800
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				is_year = 1800
+			}
+		}
+	}
+}
+
+############

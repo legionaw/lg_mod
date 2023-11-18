@@ -1,0 +1,11 @@
+﻿l_english:
+ hb_colonial_push_aspect:0 "§YEncourage Colonial Settlement§!"
+ desc_hb_colonial_push_aspect:0 "We should encourage some of our menial peasants to move to our burgeoning colonies in the hopes that they become wealthy and prosperous territories."
+ hb_conscript_zealots_aspect:0 "§YConscript Zealots§!"
+ desc_hb_conscript_zealots_aspect:0 "Pressing some of our more devout followers into military service will give us more bodies to throw at our enemies."
+ hb_church_supports_crown_aspect:0 "§YSupport the Crown§!"
+ desc_hb_church_supports_crown_aspect:0 "If we make our bishops and clerics openly praise our head of state, this could improve our standing among our peers and our subjects."
+ hb_train_heir_aspect:0 "§YTrain Our Heir§!"
+ desc_hb_train_heir_aspect:0 "Having our state clerics be responsible for the education of [Root.Heir.GetName] should make [Root.Heir.GetAdjective] a more effective ruler upon assuming power."
+ hb_dissolve_monasteries_tooltip:0 "Twenty years since we have last §YDissolved Monasteries§!."
+ rbimprov_colonial_push_tooltip:0 "Transfer 1 §YDevelopment§! from a state to this colony."

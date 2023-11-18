@@ -1,0 +1,77 @@
+sent_points = {
+	opinion = 30
+	years = 10
+	yearly_decay = 3
+}
+
+lgModifiers_OpinionSentAid_ADM = {
+	opinion = 30
+	years = 10
+	yearly_decay = 3
+}
+
+lgModifiers_OpinionSentAid_MIL = {
+	opinion = 30
+	years = 10
+	yearly_decay = 3
+}
+
+lgModifiers_OpinionSentAid_DIP = {
+	opinion = 30
+	years = 10
+	yearly_decay = 3
+}
+
+sent_manpower = {
+	opinion = 25
+	years = 5
+	yearly_decay = 5
+}
+
+sent_sailors = {
+	opinion = 25
+	years = 5
+	yearly_decay = 5
+}
+
+lgModifiers_OpinionSubsidy = {
+	opinion = 25
+}
+
+lgModifiers_OpinionSubsidy2 = {
+	opinion = 25
+}
+
+lgModifiers_OpinionSubsidy3 = {
+	opinion = 25
+}
+
+lgModifiers_OpinionSubsidy4 = {
+	opinion = 25
+}
+
+lgModifiers_OpinionIsPrincelyState = {
+	opinion = 50
+}
+
+lgModifiers_OpinionIsSuzerain = {
+	opinion = 50
+}
+
+lgModifiers_OpinionIsProtectorate = {
+	opinion = 50
+}
+
+#lgModifiers_Opinion_TheyForceVassalizedUs = {
+#	opinion = -100
+#	yearly_decay = 2
+#}
+
+lgOpinionModifiers_AmericanIndependence = {
+	opinion = 50
+}
+
+lgOpinionModifiers_AmericanIndependence2 = {
+	opinion = 200
+	yearly_decay = 1
+}

@@ -1,0 +1,33 @@
+﻿l_english:
+ helper_byz: "Byzantine Luck"
+ desc_helper_byz: "In the face of dangers, the Byzantine Empire is firm in its resolve to confront it."
+ 
+ helper_sav: "Savoyard Luck"
+ desc_helper_sav: "In the face of dangers, our House of Savoy is firm in our resolve to confront it."
+ 
+ helper_bra: "The Luck of Brandenburg"
+ desc_helper_bra: "In the face of dangers, our German state is firm in our resolve to confront it."
+ 
+ helper_dutch: "Dutch Luck"
+ desc_helper_dutch: "In the face of dangers, our Dutch people is firm in our resolve to confront it."
+
+ austrian_luck: "Austrian Luck"
+ desc_austrian_luck: "The Austria, in the face of dangers, shall be resolved to confront them."
+ 
+ lgModifiers_HabsburgLuck: "Austrian Luck"
+ desc_lgModifiers_HabsburgLuck: "Let others wage war, but thou, O happy Austria, marry; for those kingdoms which Mars gives to others, Venus gives to thee."
+ 
+ lgModifiers_GermanLuck: "German Luck"
+ desc_lgModifiers_GermanLuck: "The Providence has considered our German state worthy of being destined to unite the disparate German states under its benevolent rule. Therefore it has been accordingly blessed with many fortunate things to help it along."
+ 
+ lgModifiers_ManchuLuck: "Manchu Luck"
+ desc_lgModifiers_ManchuLuck: "The higher beings has considered our Manchu tribe worthy of being destined to unite the Chinese empire under its benevolent rule. Therefore it has been accordingly blessed with many fortunate things to help it along."
+ 
+ lgModifiers_RussianLuck: "Russian Luck"
+ desc_lgModifiers_RussianLuck: "The Providence has considered our Russian state worthy of being destined to place the great western expanses under its benevolent rule. Therefore it has been accordingly blessed with fortunes to aid its colonization efforts in that great lands known to us as Siberia."
+ 
+ lgModifiers_BritishLuck: "British Luck"
+ desc_lgModifiers_BritishLuck: "British Luck"
+ 
+ lgModifiers_EarlyPersianLuck: "Early Persian Luck"
+ desc_lgModifiers_EarlyPersianLuck: "Early Persian Luck"
